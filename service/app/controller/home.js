@@ -7,7 +7,7 @@ class HomeController extends Controller {
     const { ctx } = this;
     ctx.body = 'hi, egg';
   }
-  async list(){
+  async list() {
     const { ctx } = this;
     ctx.body = '<h1>Hubert Blog list</h1>';
 
