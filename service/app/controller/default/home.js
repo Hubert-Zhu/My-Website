@@ -14,3 +14,11 @@ class HomeController extends Controller {
 
 module.exports = HomeController;
 
+class MayBe{
+  static of (value){
+    return new MayBe
+  }
+
+  constructor(value){
+    this._value = value
+  }
