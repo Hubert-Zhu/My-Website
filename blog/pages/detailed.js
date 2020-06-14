@@ -11,6 +11,7 @@ import Footer from '../components/Footer'
 
 import '../static/style/pages/detailed.css'
 import 'markdown-navbar/dist/navbar.css'
+import axios from 'axios'
 
 const Detailed = () => {
     let markdown= ' ' +
@@ -107,6 +108,23 @@ const Detailed = () => {
         <Footer/>
     </div>
     )
+}
+
+Detailed.getInitialProps = async(context)=>{
+    console.log(context.query.id)
+
+    let id = context.query.id
+
+    const promise = new Promise((resolve)=>{
+        axios('http://127.0.0.1:7001/default/getArticleById').then(
+            (res)=>{
+                console.log(res)
+                resolve(res.data.data[0])
+            }
+        )
+    })
+
+    return await promise
 }
 
 export default Detailed;

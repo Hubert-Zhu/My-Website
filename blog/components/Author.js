@@ -4,7 +4,7 @@ import '../static/style/components/Author.css'
 const Author = () => {
     return(
         <div className={'author-div'}>
-            <div> <Avatar size={100} src={'./Miao.jpg'} alt={'头像'}/></div>
+            <div> <Avatar size={100} href={'./Miao.jpg'} alt={'头像'}/></div>
                 <div className={'author-introduction'}>
                     全干工程师
                     <Divider>Contact Me</Divider>
