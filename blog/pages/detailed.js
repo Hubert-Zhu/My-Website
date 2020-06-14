@@ -116,10 +116,12 @@ Detailed.getInitialProps = async(context)=>{
     let id = context.query.id
 
     const promise = new Promise((resolve)=>{
-        axios('http://127.0.0.1:7001/default/getArticleById').then(
+        axios('http://127.0.0.1:7001/default/getArticleById/'+id).then(
             (res)=>{
+                console.log(id)
                 console.log(res)
-                resolve(res.data.data[0])
+                console.log(res.data.data[id-1])
+                resolve(res.data.data[id-1])
             }
         )
     })
