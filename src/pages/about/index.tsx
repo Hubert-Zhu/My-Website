@@ -98,11 +98,11 @@ const UsingTypescript: React.FC<PageProps<DataProps>> = ({ data, path }) => (
     <div className="contact">
       <h2 className="contact__title" >Contact Me </h2>
       
-      <div className="contact__item" >Linkdin: https://www.linkedin.com/in/hubert-zhu-23002b19b/</div>
+      <div className="contact__item" >Linkdin: <a href="https://www.linkedin.com/in/hubert-zhu-23002b19b/"> https://www.linkedin.com/in/hubert-zhu-23002b19b </a></div>
 
-      <div className="contact__item" >Email: zhubolin010118@gmail.com</div>
+      <div className="contact__item" >Email: <a href="mailto: zhubolin010118@gmail.com">  zhubolin010118@gmail.com </a></div>
       
-      <div className="contact__item" >Github: https://github.com/Hubert-Zhu</div>
+      <div className="contact__item" >Github: <a href="https://github.com/Hubert-Zhu">  https://github.com/Hubert-Zhu</a></div>
     </div>
     
   </div>
