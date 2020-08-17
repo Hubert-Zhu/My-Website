@@ -7,7 +7,7 @@ const Nav: React.FC = () => (
   <nav className="nav">
     <div className="nav__avatar">
       <img src={Avatar} alt="Touxiang" /> 
-      <div>Hubert Zhu</div>
+      <div className="nav__name">Hubert Zhu</div>
     </div>
     <div className="nav__options">
         <div className="nav__option">Home</div>

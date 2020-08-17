@@ -15,16 +15,15 @@ type DataProps = {
 
 const UsingTypescript: React.FC<PageProps<DataProps>> = ({ data, path }) => (
   <>
-    <Nav style={{color:"white", backgroundColor:"rgba(0,0,0,0)"}}/>
     <div className="home">
-      <div className="home__avatar">
-        <img src={Avatar} alt="Hello" />
-      </div>
+      <Nav />
 
-      <div className="home__links">
-        <div className="home__link">About Me</div>
-        <div className="home__link">Blogs</div>
-        <div className="home__link">Projects</div>
+      <div className="home__wrap">
+        <div className="home__avatar">
+          <img src={Avatar} alt="Hello" />
+        </div>
+
+        <h1 className="home__name">Hubert Zhu</h1>
       </div>
     </div>
   </>

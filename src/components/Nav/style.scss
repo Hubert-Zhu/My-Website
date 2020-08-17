@@ -23,13 +23,13 @@
             max-width: 32px;
             border-radius: 50%;
         }
-
-        div{
-            margin: 0 10px;
-            color: #007BE2;
-        }
     }
 
+    &__name{
+        margin: 0 10px;
+        color: #007BE2;
+    }
+    
     &__options{
         display: flex;
         justify-content: flex-end;
