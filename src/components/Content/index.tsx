@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react"
 
 const HTMLContent = ({ content, className }) => (
   <div className={className} dangerouslySetInnerHTML={{ __html: content }} />
@@ -7,8 +7,6 @@ const HTMLContent = ({ content, className }) => (
 const Content = ({ content, className }) => (
   <div className={className}>{content}</div>
 )
-
-
 
 export default Content
 export { HTMLContent }

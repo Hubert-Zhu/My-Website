@@ -36,12 +36,13 @@
 
 import React from 'react'
 import { graphql, Link } from 'gatsby'
-import Trianglify from '../components/Trianglify'
-import Layout from '../components/Layout'
-import Navbar from '../components/Navbar'
-import Quote from '../components/Quote'
-import Utterances from '../components/Utterances'
 import Content, { HTMLContent } from '../components/Content'
+import Layout from '../components/Layout'
+
+import Trianglify from '../components/Trianglify'
+import Navbar from '../components/Navbar'
+import Utterances from '../components/Utterances'
+
 
 export const BlogPostTemplate = ({
   content,
@@ -90,16 +91,9 @@ export const BlogPostTemplate = ({
   )
 }
 
-BlogPostTemplate.propTypes = {
-  content: PropTypes.node.isRequired,
-  description: PropTypes.node,
-  tableOfContents: PropTypes.string,
-  contentComponent: PropTypes.func,
-  tags: PropTypes.arrayOf(PropTypes.string)
-}
 
 const BlogPost = ({ data: { site, post }, pageContext }) => {
-  const { title, description, date, quote, tags } = post.frontmatter
+  const { title, description, date, tags } = post.frontmatter
 
   return (
     <Layout
@@ -143,9 +137,7 @@ const BlogPost = ({ data: { site, post }, pageContext }) => {
         </div>
       </section>
 
-      <section className='section'>
-        <Quote quote={quote} />
-      </section>
+    
 
       <BlogPostTemplate
         content={post.html}
@@ -199,27 +191,6 @@ const BlogPost = ({ data: { site, post }, pageContext }) => {
   )
 }
 
-BlogPost.propTypes = {
-  data: PropTypes.shape({
-    site: PropTypes.shape({
-      siteMetadata: PropTypes.shape({
-        title: PropTypes.string
-      })
-    }),
-    markdownRemark: PropTypes.object
-  }),
-  pageContext: PropTypes.shape({
-    prev: PropTypes.shape({
-      title: PropTypes.string,
-      path: PropTypes.string
-    }),
-    next: PropTypes.shape({
-      title: PropTypes.string,
-      path: PropTypes.string
-    })
-  })
-}
-
 export default BlogPost
 
 export const pageQuery = graphql`
@@ -241,11 +212,6 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         title
         description
-        quote {
-          content
-          author
-          source
-        }
         tags
       }
     }
