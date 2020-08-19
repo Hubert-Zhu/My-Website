@@ -5,7 +5,7 @@ import Avatar from "./avatar.jpg"
 
 import "./style.scss"
 
-import Nav from "../../components/Nav"
+import Nav from "../../components/Navbar"
 
 type DataProps = {
   site: {

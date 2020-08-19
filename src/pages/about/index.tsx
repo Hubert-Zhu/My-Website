@@ -4,7 +4,7 @@ import { PageProps, graphql } from "gatsby"
 import "./style.scss"
 import Avatar from "./avatar.jpg"
 
-import Nav from "../../components/Nav"
+import Nav from "../../components/Navbar"
 
 type DataProps = {
   site: {
@@ -20,7 +20,7 @@ const UsingTypescript: React.FC<PageProps<DataProps>> = ({ data, path }) => (
       <img className="intro__avatar" src={Avatar} alt="touxiang" />
       <div>
         <h1 className="intro__name">
-          Hey! I am <span>Hubert Zhu!</span>
+          Hello! I am <span>Hubert Zhu!</span>
         </h1>
         <ul>
           <li className="intro__self-intro">🎉 Welcome to my website</li>
