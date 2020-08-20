@@ -40,7 +40,7 @@ import Content, { HTMLContent } from '../components/Content'
 import Layout from '../components/Layout'
 import Navbar from '../components/Navbar'
 
-//Fragement
+
 export const BlogPostTemplate = ({
   content,
   description,
@@ -178,14 +178,12 @@ export const pageQuery = graphql`
       html
       excerpt(pruneLength: 200)
       tableOfContents
-      fields {
-        slug
-      }
       frontmatter {
         date(formatString: "MMMM DD, YYYY")
         title
         description
         tags
+        slug
       }
     }
   }
