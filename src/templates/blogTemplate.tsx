@@ -1,44 +1,9 @@
-// import React from "react"
-// import { graphql } from "gatsby"
-
-// export default function Template({
-//   data, // this prop will be injected by the GraphQL query below.
-// }) {
-//   const { markdownRemark } = data // data.markdownRemark holds your post data
-//   const { frontmatter, html } = markdownRemark
-//   return (
-//     <div className="blog-post-container">
-//       <div className="blog-post">
-//         <h1>{frontmatter.title}</h1>
-//         <h2>{frontmatter.date}</h2>
-//         <div
-//           className="blog-post-content"
-//           dangerouslySetInnerHTML={{ __html: html }}
-//         />
-//       </div>
-//     </div>
-//   )
-// }
-
-// export const pageQuery = graphql`
-//   query {
-//     markdownRemark{
-//       html
-//       frontmatter {
-//         date(formatString: "MMMM DD, YYYY")
-//         slug
-//         title
-//       }
-//     }
-//   }
-// `
-
-
 import React from 'react'
 import { graphql, Link } from 'gatsby'
 import Content, { HTMLContent } from '../components/Content'
 import Layout from '../components/Layout'
 import Navbar from '../components/Navbar'
+import "./postify.scss"
 
 
 export const BlogPostTemplate = ({
@@ -56,7 +21,7 @@ export const BlogPostTemplate = ({
       <div style={{ position: 'static' }}>
         <div>
           <div>
-            <div>
+            <div className='postify'>
               {!!description && <p>{description}</p>}
               {!!tableOfContents && (
                 <div
@@ -96,10 +61,7 @@ const BlogPost = ({ data: { site, post }, pageContext }) => {
       description={`${description || post.excerpt}`}
     >
       <section>
-        <div>
-          <Navbar />
-        </div>
-
+      
         <div>
           <div>
             <h1>{title}</h1>

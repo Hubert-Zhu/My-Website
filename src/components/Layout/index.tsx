@@ -20,7 +20,7 @@ const Layout = ({ title, description, children }) => {
 
   return (
     <div>
-      <Helmet>
+      {/* <Helmet>
         <title>{title || siteMetadata.title}</title>
         <meta
           name="description"
@@ -32,7 +32,7 @@ const Layout = ({ title, description, children }) => {
         />
         <link rel="manifest" href="/manifest.json" />
         <meta name="theme-color" content="#fff" />
-      </Helmet>
+      </Helmet> */}
 
       <div>{children}</div>
 
