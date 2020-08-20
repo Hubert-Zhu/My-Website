@@ -1,53 +1,51 @@
-import React from 'react'
-import { graphql, Link } from 'gatsby'
-import Content, { HTMLContent } from '../components/Content'
-import Layout from '../components/Layout'
-import Navbar from '../components/Navbar'
-import "./postify.scss"
-
+import React from "react"
+import { graphql, Link } from "gatsby"
+import Content, { HTMLContent } from "../components/Content"
+import Layout from "../components/Layout"
+import Navbar from "../components/Navbar"
+import "./style.scss"
 
 export const BlogPostTemplate = ({
   content,
   description,
   tableOfContents,
   contentComponent,
-  tags
+  tags,
 }) => {
   const PostContent = contentComponent || Content
 
   return (
-    <section>
+    <div style={{ position: "static" }}>
       {/* fix gatsby-remark-autolink-headers scrolling, let offsetParent be body */}
-      <div style={{ position: 'static' }}>
-        <div>
-          <div>
-            <div className='postify'>
-              {!!description && <p>{description}</p>}
-              {!!tableOfContents && (
-                <div
-                  dangerouslySetInnerHTML={{ __html: tableOfContents }}
-                />
-              )}
-              <PostContent content={content} />
-            </div>
-            {tags && tags.length ? (
-              <div style={{ marginTop: `2rem` }}>
-                <div>
-                  {tags.map(tag => (
-                    <Link
-                      key={tag}
-                      to={`/archives?search=%23${tag}`}
-                    >
-                      #{tag}
-                    </Link>
-                  ))}
-                </div>
-              </div>
-            ) : null}
-          </div>
+      <div className="留给相应布局">
+        <div className="postify">
+          {!!description && (
+            <p className="postify__description">{description}</p>
+          )}
+
+          {!!tableOfContents && (
+            <div
+              className={"postify__topic-table"}
+              dangerouslySetInnerHTML={{ __html: tableOfContents }}
+            />
+          )}
+
+          <PostContent content={content} />
         </div>
+
+        {tags && tags.length ? (
+          <div style={{ marginTop: `2rem` }}>
+            <div>
+              {tags.map(tag => (
+                <Link key={tag} to={`/archives?search=%23${tag}`}>
+                  #{tag}
+                </Link>
+              ))}
+            </div>
+          </div>
+        ) : null}
       </div>
-    </section>
+    </div>
   )
 }
 
@@ -60,68 +58,59 @@ const BlogPost = ({ data: { site, post }, pageContext }) => {
       title={`${title} | ${site.siteMetadata.title}`}
       description={`${description || post.excerpt}`}
     >
-      <section>
-      
-        <div>
-          <div>
-            <h1>{title}</h1>
-          </div>
-        </div>
+      <div className="blog">
+        <header className="blog__titlebar">
+          <h1>{title}</h1>
+        </header>
 
         <div>
           <div>
-            <a href='./' onClick={e => e.preventDefault()}>
+            <a href="./" onClick={e => e.preventDefault()}>
               {date}
             </a>
           </div>
         </div>
-      </section>
 
-      <BlogPostTemplate
-        content={post.html}
-        description={description}
-        tableOfContents={post.tableOfContents}
-        contentComponent={HTMLContent}
-        tags={tags}
-      />
+        <BlogPostTemplate
+          content={post.html}
+          description={description}
+          tableOfContents={post.tableOfContents}
+          contentComponent={HTMLContent}
+          tags={tags}
+        />
 
-      <section>
-        <div>
+        <section>
           <div>
-            {pageContext.next && (
-              <Link
-                to={pageContext.next.path}
-              >
-                <strong>NEWER</strong>
-                <p>{pageContext.next.title}</p>
-              </Link>
-            )}
+            <div>
+              {pageContext.next && (
+                <Link to={pageContext.next.path}>
+                  <strong>NEWER</strong>
+                  <p>{pageContext.next.title}</p>
+                </Link>
+              )}
+            </div>
+
+            <div
+              style={{
+                alignSelf: "center",
+                width: 8,
+                height: 8,
+                margin: "0 1em",
+                borderRadius: "50%",
+              }}
+            />
+
+            <div>
+              {pageContext.prev && (
+                <Link to={pageContext.prev.path}>
+                  <strong>OLDER</strong>
+                  <p>{pageContext.prev.title}</p>
+                </Link>
+              )}
+            </div>
           </div>
-
-          <div
-            style={{
-              alignSelf: 'center',
-              width: 8,
-              height: 8,
-              margin: '0 1em',
-              borderRadius: '50%'
-            }}
-          />
-
-          <div>
-            {pageContext.prev && (
-              <Link
-                to={pageContext.prev.path}
-              >
-                <strong>OLDER</strong>
-                <p>{pageContext.prev.title}</p>
-              </Link>
-            )}
-          </div>
-        </div>
-      </section>
-
-
+        </section>
+      </div>
     </Layout>
   )
 }
