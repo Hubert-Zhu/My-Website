@@ -9,8 +9,10 @@ $postify-color-header-counter: #888 !default;
 .blog{
     &__titlebar{
         width: 100vw;
-        height: 20vh;
-        background-color: blue;
+        height: 29vw;
+        background-image: url("./bg.png");
+        background-size: cover;
+        background-repeat: no-repeat;
     }
 }
 
