@@ -4,6 +4,7 @@ import Content, { HTMLContent } from "../components/Content"
 import Layout from "../components/Layout"
 import Navbar from "../components/Navbar"
 import "./style.scss"
+import "./codestyle.scss"
 
 export const BlogPostTemplate = ({
   content,

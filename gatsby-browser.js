@@ -5,5 +5,3 @@
  */
 
 // You can delete this file if you're not using it
-import 'gatsby-syntax-highlights-dracula';
-import 'gatsby-line-highlights-dracula';
