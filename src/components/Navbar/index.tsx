@@ -10,7 +10,6 @@ const Nav: React.FC = () => (
       <div className="nav__name">Hubert Zhu</div>
     </div>
     <div className="nav__options">
-        <div className="nav__option">Home</div>
         <div className="nav__option">About Me</div>
         <div className="nav__option">Projects</div>
         <div className="nav__option">Blogs</div>
