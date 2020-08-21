@@ -1,7 +1,7 @@
 import React from "react"
-import { Helmet } from "react-helmet"
+import { Helmet } from "react-helmet";
 import { graphql, useStaticQuery } from "gatsby"
-import Footer from "../Footer"
+import Footer from "../Footer/index"
 
 const Layout = ({ title, description, children }) => {
   
