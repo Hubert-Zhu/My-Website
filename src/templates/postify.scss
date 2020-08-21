@@ -31,10 +31,6 @@ $postify-color-header-counter: #888 !default;
     margin: 0 auto;
   }
 
-  /* ========================================================================= *\
-   * 链接
-  \* ========================================================================= */
-
   a {
     color: $postify-color-link;
     text-decoration: none;
@@ -451,5 +447,74 @@ $postify-color-header-counter: #888 !default;
   ins:hover {
     border: 0 none;
     text-decoration: underline;
+  }
+}
+
+
+
+
+
+//////////////////////////////
+.gatsby-highlight {
+  padding: 2em 1.5em;
+  border-radius: 5px;
+  
+  pre[class*="language-"].line-numbers {
+    position: relative;
+    padding-left: 3.8em;
+    counter-reset: linenumber;
+    font-size: inherit;
+    
+    &>code {
+      position: relative;
+      white-space: inherit;
+      font-size: inherit;
+    }
+  }
+  
+  .line-numbers-rows {
+    width: 2em !important;
+    position: absolute;
+    pointer-events: none;
+    top: 0;
+    letter-spacing: -1px;
+    border-right: 1px #404040 solid;
+    user-select: none;
+    
+    &>span {
+      pointer-events: none;
+      display: block;
+      counter-increment: linenumber;
+      
+      &::before {
+        content: counter(linenumber);
+        color: #999;
+        display: block;
+        padding-right: 0.8em;
+        text-align: right;
+      }
+    }
+  }
+  
+  // fix bulma conflict
+  .tag {
+    display: inline;
+    font-size: 1em;
+    background-color: transparent;
+    border-radius: 0;
+    padding: 0;
+    line-height: 24px;
+    white-space: pre;
+  }
+  
+  @media screen and (max-width: $mobile) {
+    margin: 0 -1.5rem;
+    padding: 2em 0.5em;
+    border-radius: 0;
+    font-size: 14px;
+    
+    pre[class*="language-"].line-numbers {
+      padding: 0 1em 0 2.8em;
+    }
   }
 }

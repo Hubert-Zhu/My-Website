@@ -33,6 +33,11 @@ export const BlogPostTemplate = ({
           <PostContent content={content} />
         </div>
 
+
+
+
+
+
         {tags && tags.length ? (
           <div style={{ marginTop: `2rem` }}>
             <div>
@@ -44,6 +49,8 @@ export const BlogPostTemplate = ({
             </div>
           </div>
         ) : null}
+
+
       </div>
     </div>
   )
@@ -59,16 +66,13 @@ const BlogPost = ({ data: { site, post }, pageContext }) => {
       description={`${description || post.excerpt}`}
     >
       <div className="blog">
+        <Navbar />
         <header className="blog__titlebar">
           <h1>{title}</h1>
         </header>
 
         <div>
-          <div>
-            <a href="./" onClick={e => e.preventDefault()}>
-              {date}
-            </a>
-          </div>
+          <div>{date}</div>
         </div>
 
         <BlogPostTemplate
@@ -79,7 +83,7 @@ const BlogPost = ({ data: { site, post }, pageContext }) => {
           tags={tags}
         />
 
-        <section>
+        {/* {<section>
           <div>
             <div>
               {pageContext.next && (
@@ -90,16 +94,6 @@ const BlogPost = ({ data: { site, post }, pageContext }) => {
               )}
             </div>
 
-            <div
-              style={{
-                alignSelf: "center",
-                width: 8,
-                height: 8,
-                margin: "0 1em",
-                borderRadius: "50%",
-              }}
-            />
-
             <div>
               {pageContext.prev && (
                 <Link to={pageContext.prev.path}>
@@ -109,7 +103,8 @@ const BlogPost = ({ data: { site, post }, pageContext }) => {
               )}
             </div>
           </div>
-        </section>
+        </section>} */}
+      
       </div>
     </Layout>
   )
@@ -128,7 +123,7 @@ export const pageQuery = graphql`
       id
       html
       excerpt(pruneLength: 200)
-      tableOfContents
+      tableOfContents(absolute: false)
       frontmatter {
         date(formatString: "MMMM DD, YYYY")
         title

@@ -38,7 +38,52 @@ module.exports = {
         name: `markdown-pages`,
       },
     },
-    `gatsby-transformer-remark`,
+    `gatsby-plugin-sharp`,
+    {
+      resolve: 'gatsby-transformer-remark',
+      options: {
+        plugins: [
+          {
+            resolve: 'gatsby-remark-autolink-headers',
+            options: {
+              offsetY: '100',
+              className: 'auto-anchor'
+            }
+          }, // make sure before prismjs
+          {
+            resolve: 'gatsby-remark-code-titles'
+          }, // make sure before prismjs
+          {
+            resolve: `gatsby-remark-prismjs`,
+            options: {
+              showLineNumbers: true,
+              noInlineHighlight: true
+            }
+          },
+          {
+            resolve: 'gatsby-remark-relative-images',
+            options: {
+              name: 'uploads'
+            }
+          },
+          {
+            resolve: 'gatsby-remark-images',
+            options: {
+              // It's important to specify the maxWidth (in pixels) of
+              // the content container as this plugin uses this as the
+              // base for generating different widths of each image.
+              maxWidth: 2048
+            }
+          },
+          {
+            resolve: 'gatsby-remark-copy-linked-files',
+            options: {
+              destinationDir: 'static'
+            }
+          }
+        ]
+      }
+    },
     `gatsby-plugin-typescript`
   ]
 }
