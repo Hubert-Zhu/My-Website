@@ -3,24 +3,24 @@ $postify-line-height: 1.8 !default;
 
 $postify-color-hr: #999 !default;
 $postify-color-link-hover: #333 !default;
-$postify-color-link: #81a2c2 !default;
+$postify-color-link: #3273dc !default;
 $postify-color-header-counter: #888 !default;
 
 .blog {
-  .nav {
-    color: white;
-    background: transparent;
-    box-shadow: none;
+  font-family: system-ui;
+  // .nav {
+  //   color: white;
+  //   background: transparent;
+  //   box-shadow: none;
 
-    &__name {
-      color: white;
-    }
-  }
-
-  &__titlebar {
+  //   &__name {
+  //     color: white;
+  //   }
+  // }
+  &__title-container {
     width: 100vw;
     height: 29vw;
-    margin-top: -60px;
+    // margin-top: -60px;
     background-image: url("./bg.png");
     background-size: cover;
     background-repeat: no-repeat;
@@ -28,6 +28,17 @@ $postify-color-header-counter: #888 !default;
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+
+  &__title {
+    font-size: 30px;
+    font-weight: 600;
+  }
+
+  &__date {
+    font-size: 16px;
+    position: absolute;
+    top: 26vw;
   }
 }
 
@@ -39,339 +50,169 @@ $postify-color-header-counter: #888 !default;
   line-height: $postify-line-height;
 
   &__description {
-    margin: 0 10px;
+    margin: 10px 0;
   }
 
   &__topic-table {
     padding: 10px;
     border-left: 5px solid #dbdbdb;
     background-color: #f5f5f5;
-  }
 
-  //Cannot use BEM, becuase all html is parse by plugin
-  iframe {
-    width: 100%;
-    height: 408px;
-  }
+    ul {
+      list-style-type: square;
+      padding-left: 20px;
+    }
 
-  p > img {
-    display: block;
-    margin: 0 auto;
-  }
-
-  a {
-    color: $postify-color-link;
-    text-decoration: none;
-  }
-
-  a:hover,
-  ins:hover {
-    color: $postify-color-link-hover;
-    text-decoration: underline;
-    text-underline-position: under;
-  }
-
-  li,
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
     a {
-      border-bottom: 1px solid transparent;
+      color: #3273dc;
+    }
+  }
+
+  &__content {
+    //Cannot use BEM, becuase all html is parse by plugin
+    p > img {
+      display: block;
+      margin: 0 auto;
     }
 
-    a:hover {
+    a {
+      color: $postify-color-link;
       text-decoration: none;
-      border-bottom: 1px solid;
+    }
+
+    a:hover,
+    ins:hover {
+      color: $postify-color-link-hover;
+      text-decoration: underline;
+      text-underline-position: under;
+    }
+
+    ol{
+      list-style: decimal;
+      padding-left: 21px;
+    }
+
+    li,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      a {
+        border-bottom: 1px solid transparent;
+      }
+
+      a:hover {
+        text-decoration: none;
+        border-bottom: 1px solid;
+      }
+    }
+
+    a img {
+      vertical-align: baseline;
+    }
+
+    cite {
+      border-bottom: 3px double;
+    }
+
+    p, 
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6{
+      margin-top: 12px;
+      margin-bottom: 12px;
+    }
+
+    h1 {
+      font-size: 21px;
+    }
+
+    h2 {
+      font-size: 18px;
+    }
+
+    h3 {
+      font-size: 14px;
+    }
+
+    h4 {
+      font-size: 13px;
+    }
+
+    h5 {
+      font-size: 11px;
+    }
+
+    h6 {
+      font-size: 10px;
+    }
+
+    hr {
+      border: 0 none;
+      border-bottom: 1px solid $postify-color-hr;
+      margin-top: 32px;
+      margin-bottom: 32px;
+    }
+
+    h2,
+    h3,
+    h4 {
+      &:before {
+        margin-right: 0.5em;
+        color: $postify-color-header-counter;
+      }
+    }
+
+
+    //Title Sequence
+    counter-reset: chapter section subsection;
+
+    h2 {
+      counter-reset: section;
+
+      &:before {
+        content: counter(chapter);
+        counter-increment: chapter;
+      }
+    }
+
+    h3 {
+      counter-reset: subsection;
+
+      &:before {
+        content: counter(chapter) "." counter(section);
+        counter-increment: section;
+      }
+    }
+
+    h4:before {
+      content: counter(chapter) "." counter(section) "." counter(subsection);
+      counter-increment: subsection;
     }
   }
 
-  a img {
-    vertical-align: baseline;
+  &__tags{
+    margin-top: 20px;
   }
-
-  cite {
-    border-bottom: 3px double;
-  }
-
-  p {
-    margin-top: 1.29em;
-    margin-bottom: 1.29em;
-  }
-
-  // 中文小于 12px 可读性很差
-  // 统一 IE 6/7 中字体大小
-  // 统一 Firefox 4+，Safari 5 和 Chrome 中「section」和「article」内的字体大小
-  h1 {
-    font-size: 2.14em;
-  }
-
-  h2 {
-    font-size: 1.86em;
-  }
-
-  h3 {
-    font-size: 1.43em;
-  }
-
-  h4 {
-    font-size: 1.29em;
-  }
-
-  h5 {
-    font-size: 1.14em;
-  }
-
-  h6 {
-    font-size: 1em;
-  }
-
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    margin-top: 12px;
-    margin-bottom: 12px;
-  }
-
-  blockquote {
-    margin: 2.29em 2em;
-    padding-left: 1em;
-    border-left: 3px solid #ccc;
-    line-height: $postify-line-height * 0.89;
-  }
-
-  /* ========================================================================= *\
-   * 列表
-  \* ========================================================================= */
-
-  ul,
-  ol {
-    margin-bottom: 10px;
-  }
-
-  // 1. 无序列表默认使用方块
-  ul {
-    list-style-type: square; // /* 1 */
-    padding-left: 21.4px;
-    margin-top: 10px;
-  }
-
-  ul ul,
-  ul ol ul {
-    list-style-type: disc;
-  }
-
-  ol {
-    list-style: decimal;
-    padding-left: 21.4px;
-  }
-
-  ol ol ul,
-  ol ul ul,
-  ul ul ul {
-    list-style-type: circle;
-  }
-
-  ol ol ol ul,
-  ol ol ul ul,
-  ol ul ul ul,
-  ul ul ul ul {
-    list-style-type: square;
-  }
-
-  dt {
-    font-weight: bold;
-    margin-top: 1em;
-  }
-
-  /* ========================================================================= *\
-   * 代码
-  \* ========================================================================= */
-
-  code {
+  &__tag{
     display: inline-block;
-    *display: inline;
-    *zoom: 1;
-    line-height: normal;
-    font-size: 0.86em;
-    margin: 0 0.25em;
-    padding: 0 0.4em;
-    border: 1px solid #ddd;
-    background-color: #f8f8f8;
-    border-radius: 3px;
-  }
-
-  pre {
-    overflow: auto;
-    padding: 6px 10px;
-    border-radius: 3px;
-    word-break: break-all;
-    word-wrap: break-word;
-    -webkit-overflow-scrolling: touch;
-  }
-
-  //   通常代码高亮 code 标签会嵌套在 pre 标签内部，需要重置样式。
-  pre code {
-    margin: 0;
-    padding: 0;
-    border: 0 none;
-    background: none;
-    border-radius: 0;
-    font-size: inherit;
-    line-height: 1.5;
-  }
-
-  /* ========================================================================= *\
-   * 快捷键 <kbd>
-  \* ========================================================================= */
-
-  kbd {
-    display: inline-block;
-    padding: 0.25em 0.5em 0.2em;
-    margin-left: 0.25em;
-    margin-right: 0.25em;
-    font: 75%/1 monaco, menlo, consolas, "courier new", courier, monospace;
-    border: solid 1px #ccc;
-    border-bottom-color: #bbb;
-    border-radius: 3px;
-    white-space: nowrap;
-    word-wrap: normal;
-    text-transform: capitalize; // 首字母大写
-
-    color: #555;
-    background-color: #fefefe;
-    background-image: linear-gradient(
-      to bottom,
-      rgba(0, 0, 0, 0.05),
-      rgba(0, 0, 0, 0)
-    );
-    box-shadow: 0 2px 0 #ccc, 0 3px 1px #999, inset 0 1px 1px #fff;
-  }
-
-  .dark kbd,
-  kbd.dark {
-    color: #fdfdfd;
-    text-shadow: 0 -1px 0 #000;
-    border-color: #000;
-    background-color: #4d4c4c;
-    background-image: linear-gradient(
-      rgba(0, 0, 0, 0.5),
-      rgba(0, 0, 0, 0) 80%,
-      rgba(0, 0, 0, 0)
-    );
-    box-shadow: 0 2px 0 #000, 0 3px 1px #999, inset 0 1px 1px #aaa,
-      inset 0 -1px 3px #272727;
-  }
-
-  kbd kbd {
-    padding: 0;
-    font-size: 100%;
-    font-weight: bold;
-    box-shadow: none;
-  }
-
-  // Mac Symbol
-  kbd[data-key]:after {
-    font-family: "Myriad Set Pro", "Helvetica Neue", "Helvetica", "Arial",
-      "Verdana", "sans-serif";
-  }
-
-  kbd[data-key="command"]:after {
-    content: " ⌘";
-  }
-
-  kbd[data-key="cmd"]:after {
-    content: " ⌘";
-  }
-
-  kbd[data-key="shift"]:after {
-    content: " ⇧";
-  }
-
-  kbd[data-key="control"]:after {
-    content: " ⌃";
-  }
-
-  kbd[data-key="option"]:after {
-    content: " ⌥";
-  }
-
-  kbd[data-key="capslock"]:after {
-    content: " ⇪";
-  }
-
-  kbd[data-key="caps lock"]:after {
-    content: " ⇪";
-  }
-
-  kbd[data-key="escape"]:after {
-    content: " ⎋";
-  }
-
-  kbd[data-key="esc"]:after {
-    content: " ⎋";
-  }
-
-  kbd[data-key="return"]:after {
-    content: " ↩";
-  }
-
-  kbd[data-key="enter"]:after {
-    content: " ↩";
-  }
-
-  kbd[data-key="delete"]:after {
-    content: " ⌫";
-  }
-
-  kbd[data-key="eject"]:after {
-    content: " ⏏";
-  }
-
-  hr {
-    border: 0 none;
-    border-bottom: 1px solid $postify-color-hr;
-    margin-top: 32px;
-    margin-bottom: 32px;
-  }
-
-  h2,
-  h3,
-  h4 {
-    &:before {
-      margin-right: 0.5em;
-      color: $postify-color-header-counter;
+    background-color: #3298dc;
+    font-size: 13px;
+    margin: 0 10px;
+    padding: 0 8px;
+    border-radius: 5px;
+    > a{
+      color: white;
     }
-  }
-
-  counter-reset: chapter section subsection;
-
-  h2 {
-    counter-reset: section;
-
-    &:before {
-      content: counter(chapter);
-      counter-increment: chapter;
-    }
-  }
-
-  h3 {
-    counter-reset: subsection;
-
-    &:before {
-      content: counter(chapter) "." counter(section);
-      counter-increment: section;
-    }
-  }
-
-  h4:before {
-    content: counter(chapter) "." counter(section) "." counter(subsection);
-    counter-increment: subsection;
   }
 }
 
+
+.tags{
+ 
+}

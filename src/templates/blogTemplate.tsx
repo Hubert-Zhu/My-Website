@@ -31,27 +31,20 @@ export const BlogPostTemplate = ({
             />
           )}
 
-          <PostContent content={content} />
-        </div>
+          <PostContent className="postify__content" content={content} />
 
-
-
-
-
-
-        {tags && tags.length ? (
-          <div style={{ marginTop: `2rem` }}>
-            <div>
+          {tags && tags.length ? (
+            <div className="postify__tags">
               {tags.map(tag => (
-                <Link key={tag} to={`/archives?search=%23${tag}`}>
-                  #{tag}
-                </Link>
+                <div className="postify__tag">
+                  <Link key={tag} to={`/archives?search=%23${tag}`}>
+                    #{tag}
+                  </Link>
+                </div>
               ))}
             </div>
-          </div>
-        ) : null}
-
-
+          ) : null}
+        </div>
       </div>
     </div>
   )
@@ -67,14 +60,11 @@ const BlogPost = ({ data: { site, post }, pageContext }) => {
       description={`${description || post.excerpt}`}
     >
       <div className="blog">
-        <Navbar />
-        <header className="blog__titlebar">
-          <h1>{title}</h1>
+        {/* <Navbar /> */}
+        <header className="blog__title-container">
+          <h1 className="blog__title">{title}</h1>
+          <div className="blog__date">{date}</div>
         </header>
-
-        <div>
-          <div>{date}</div>
-        </div>
 
         <BlogPostTemplate
           content={post.html}
@@ -105,7 +95,6 @@ const BlogPost = ({ data: { site, post }, pageContext }) => {
             </div>
           </div>
         </section>} */}
-      
       </div>
     </Layout>
   )

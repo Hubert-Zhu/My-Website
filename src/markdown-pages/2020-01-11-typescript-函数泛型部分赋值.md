@@ -8,11 +8,12 @@ description: Sass 提供了双亲选择器 & 用以在嵌套选择器中引用�
 quote:
   content: We must strive to become good ancestors.
   author: Ralph Nader
-  source: ''
+  source: ""
 tags:
   - Sass
   - CSS
 ---
+
 ## 双亲选择器
 
 在 Sass 中双亲选择器（Parent Selector 有时也叫父选择器） `&` 是一个十分有用且常用的选择器，它可以复用外部选择器的名字，从而更轻松地实现多重样式编写。
@@ -42,7 +43,7 @@ tags:
 
 有时候我们遇到这样一种模式，如主题样式，在元素根处可能有 `.dark-theme` 来说明目前处于黑暗模式；或者使用 [Modernizr](https://modernizr.com/) 检测浏览器特性，在根元素会根据环境添加相应 class 表示特性支持情况。这时候我们写样式可能就需要拆分开来写。
 
-```scss{9-11}
+```scss
 .btn {
   background: transparent;
 
@@ -50,7 +51,6 @@ tags:
     background: grey;
   }
 }
-
 .dark-theme .btn {
   background: linear-gradient(cornflowerblue, rebeccapurple);
 }
@@ -74,7 +74,7 @@ tags:
   &:hover {
     background: grey;
   }
-  
+
   @at-root .dark-theme & {
     background: linear-gradient(cornflowerblue, rebeccapurple);
   }
@@ -114,7 +114,7 @@ tags:
   &:hover {
     background: grey;
   }
-  
+
   @include dark-theme {
     background-image: linear-gradient(cornflowerblue, rebeccapurple);
   }
@@ -146,15 +146,15 @@ tags:
   &:hover {
     background: grey;
   }
-  
+
   @include dark-theme {
     background: linear-gradient(cornflowerblue, rebeccapurple);
   }
-  
+
   @include dark-theme(-enter) {
     background: cornflowerblue;
   }
-  
+
   @include dark-theme(-enter-active, -exit) {
     background: rebeccapurple;
   }
@@ -196,11 +196,7 @@ tags:
   @if length($modifiers) > 0 {
     $selectors: ();
     @each $modifier in $modifiers {
-      $selectors: append(
-        $selectors,
-        #{".dard-theme "}#{&}#{$modifier},
-        comma
-      );
+      $selectors: append($selectors, #{".dard-theme "}#{&}#{$modifier}, comma);
     }
     @at-root #{$selectors} {
       @content;
@@ -230,7 +226,8 @@ tags:
   background: cornflowerblue;
 }
 
-.dard-theme .btn-enter-active, .dard-theme .btn-exit {
+.dard-theme .btn-enter-active,
+.dard-theme .btn-exit {
   background: rebeccapurple;
 }
 ```
@@ -244,11 +241,7 @@ tags:
   @if length($modifiers) > 0 {
     $selectors: ();
     @each $modifier in $modifiers {
-      $selectors: append(
-        $selectors,
-        #{$ancestor}#{" "}#{&}#{$modifier},
-        comma
-      );
+      $selectors: append($selectors, #{$ancestor}#{" "}#{&}#{$modifier}, comma);
     }
     @at-root #{$selectors} {
       @content;
@@ -265,7 +258,7 @@ tags:
 
 ```scss
 @mixin dark-theme($modifiers...) {
-  @include at-root('.dark-mode', $modifiers...) {
+  @include at-root(".dark-mode", $modifiers...) {
     @content;
   }
 }
