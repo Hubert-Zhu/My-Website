@@ -4,6 +4,7 @@ import Content, { HTMLContent } from "../components/Content"
 import Layout from "../components/Layout"
 import Navbar from "../components/Navbar"
 import "./style.scss"
+import "./codestyle.scss"
 
 export const BlogPostTemplate = ({
   content,
@@ -30,20 +31,20 @@ export const BlogPostTemplate = ({
             />
           )}
 
-          <PostContent content={content} />
-        </div>
+          <PostContent className="postify__content" content={content} />
 
-        {tags && tags.length ? (
-          <div style={{ marginTop: `2rem` }}>
-            <div>
+          {tags && tags.length ? (
+            <div className="postify__tags">
               {tags.map(tag => (
-                <Link key={tag} to={`/archives?search=%23${tag}`}>
-                  #{tag}
-                </Link>
+                <div className="postify__tag">
+                  <Link key={tag} to={`/archives?search=%23${tag}`}>
+                    #{tag}
+                  </Link>
+                </div>
               ))}
             </div>
-          </div>
-        ) : null}
+          ) : null}
+        </div>
       </div>
     </div>
   )
@@ -59,17 +60,11 @@ const BlogPost = ({ data: { site, post }, pageContext }) => {
       description={`${description || post.excerpt}`}
     >
       <div className="blog">
-        <header className="blog__titlebar">
-          <h1>{title}</h1>
+        {/* <Navbar /> */}
+        <header className="blog__title-container">
+          <h1 className="blog__title">{title}</h1>
+          <div className="blog__date">{date}</div>
         </header>
-
-        <div>
-          <div>
-            <a href="./" onClick={e => e.preventDefault()}>
-              {date}
-            </a>
-          </div>
-        </div>
 
         <BlogPostTemplate
           content={post.html}
@@ -79,7 +74,7 @@ const BlogPost = ({ data: { site, post }, pageContext }) => {
           tags={tags}
         />
 
-        <section>
+        {/* {<section>
           <div>
             <div>
               {pageContext.next && (
@@ -90,16 +85,6 @@ const BlogPost = ({ data: { site, post }, pageContext }) => {
               )}
             </div>
 
-            <div
-              style={{
-                alignSelf: "center",
-                width: 8,
-                height: 8,
-                margin: "0 1em",
-                borderRadius: "50%",
-              }}
-            />
-
             <div>
               {pageContext.prev && (
                 <Link to={pageContext.prev.path}>
@@ -109,7 +94,7 @@ const BlogPost = ({ data: { site, post }, pageContext }) => {
               )}
             </div>
           </div>
-        </section>
+        </section>} */}
       </div>
     </Layout>
   )
@@ -128,7 +113,7 @@ export const pageQuery = graphql`
       id
       html
       excerpt(pruneLength: 200)
-      tableOfContents
+      tableOfContents(absolute: false)
       frontmatter {
         date(formatString: "MMMM DD, YYYY")
         title

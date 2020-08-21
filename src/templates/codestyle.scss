@@ -1,0 +1,303 @@
+$background: #282a36;
+$foreground: #f8f8f2;
+$comment: #6272a4;
+$cyan: #8be9fd;
+$green: #50fa7b;
+$orange: #ffb86c;
+$pink: #ff79c6;
+$purple: #bd93f9;
+$yellow: #f1fa8c;
+$opacity: 0.7;
+$fonts: PT Mono, Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+$font-size: 16px;
+$line-height: 24px;
+$padding: 2px 5px;
+$tab-size: 4;
+$opacity: 0.25;
+$padding-left: 55px;
+$margin-x: -15px;
+$padding-x: 12px;
+$border: 3px solid;
+
+pre,
+code {
+  &[class*="language-"] {
+    color: $foreground;
+    background: $background;
+    text-shadow: none;
+    font-size: $font-size;
+    font-family: $fonts;
+    line-height: $line-height;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+    tab-size: $tab-size;
+    hyphens: none;
+
+    &::selection {
+      text-shadow: none;
+      background-color: $purple;
+    }
+  }
+}
+
+pre {
+  &[class*="language-"] {
+    overflow: auto;
+    background: $background;
+  }
+}
+
+:not(pre) {
+  > code[class*="language-"] {
+    padding: $padding;
+    background: $background;
+    white-space: normal;
+  }
+}
+
+.namespace {
+  opacity: $opacity;
+}
+
+.token {
+  color: $pink;
+
+  &.plain-text {
+    color: $foreground;
+  }
+
+  &.doctype,
+  &.cdata,
+  &.comment {
+    color: $comment;
+  }
+
+  &.boolean,
+  &.constant,
+  &.null,
+  &.number {
+    color: $purple;
+  }
+
+  &.prolog,
+  &.selector,
+  &.entity,
+  &.operator {
+    color: $cyan;
+  }
+
+  &.tag,
+  &.string,
+  &.url,
+  &.attr-value,
+  &.punctuation,
+  &.function {
+    color: $yellow;
+  }
+
+  &.regex,
+  &.variable,
+  &.placeholder &.atrule,
+  &.attr-name,
+  &.statement {
+    color: $green;
+  }
+
+  &.keyword,
+  &.control &.builtin,
+  &.important,
+  &.char,
+  &.tag,
+  &.deleted,
+  &.directive &.namespace {
+    color: $pink;
+  }
+
+  &.unit,
+  &.symbol,
+  &.class-name,
+  &.property,
+  &.interpolation-punctuation {
+    color: $orange;
+  }
+
+  &.important {
+    font-weight: bold;
+  }
+
+  &.bold {
+    font-weight: bold;
+  }
+
+  &.italic,
+  &.plain-text {
+    font-style: italic;
+  }
+
+  &.entity {
+    cursor: help;
+  }
+}
+
+.language-css {
+  .token {
+    &.url,
+    &.function {
+      color: $green;
+    }
+  }
+}
+
+.language-c,
+.language-cpp {
+  .token {
+    &.string {
+      color: $cyan;
+    }
+  }
+}
+
+.language-java {
+  .token {
+    &.class-name {
+      color: $cyan;
+    }
+  }
+
+  span {
+    &.token {
+      &.class-name {
+        color: $cyan;
+      }
+    }
+  }
+}
+
+.language-markup {
+  .token {
+    &.attr-value {
+      color: $cyan;
+    }
+
+    &.tag {
+      $color: $green;
+    }
+  }
+}
+
+.language-objectivec {
+  .token {
+    &.property {
+      color: $cyan;
+    }
+
+    &.string {
+      color: $green;
+    }
+  }
+}
+
+.language-php {
+  .token {
+    &.boolean,
+    &.keyword {
+      color: $cyan;
+    }
+
+    &.function {
+      color: $pink;
+    }
+  }
+}
+
+.language-ruby {
+  .token {
+    &.symbol {
+      color: $cyan;
+    }
+
+    &.class-name {
+      color: $orange;
+    }
+  }
+}
+
+.gatsby-highlight {
+  overflow: auto;
+  background-color: $background;
+
+  pre[class*="language-"] {
+    overflow: initial;
+    float: left;
+    // min-width: 100%;
+    margin: 0;
+    padding-left: $padding-left;
+    background-color: transparent;
+  }
+}
+
+.gatsby-highlight-code-line {
+  position: relative;
+  display: block;
+  z-index: 1;
+  margin: 0 $margin-x;
+  padding: 0 $padding-x;
+  border-left: $border $purple;
+  background-color: rgba($purple, $opacity);
+}
+
+.gatsby-highlight {
+  padding: 2em 1.5em;
+  border-radius: 5px;
+
+  pre[class*="language-"].line-numbers {
+    position: relative;
+    padding-left: 3.8em;
+    counter-reset: linenumber;
+    font-size: inherit;
+
+    & > code {
+      position: relative;
+      white-space: inherit;
+      font-size: inherit;
+    }
+  }
+
+  .line-numbers-rows {
+    width: 2em !important;
+    position: absolute;
+    pointer-events: none;
+    top: 0;
+    letter-spacing: -1px;
+    border-right: 1px #404040 solid;
+    user-select: none;
+
+    & > span {
+      pointer-events: none;
+      display: block;
+      counter-increment: linenumber;
+
+      &::before {
+        content: counter(linenumber);
+        color: #999;
+        display: block;
+        padding-right: 0.8em;
+        text-align: right;
+      }
+    }
+  }
+
+  // fix bulma conflict
+  .tag {
+    display: inline;
+    font-size: 1em;
+    background-color: transparent;
+    border-radius: 0;
+    padding: 0;
+    line-height: 24px;
+    white-space: pre;
+  }
+}
