@@ -5,10 +5,11 @@
   color: #fcf7f8;
   
   &__wrap{
-      height: 70vh;
+      min-height: 100vh;
       display: flex;
       flex-direction: column;
-      justify-content: space-evenly;
+      justify-content: center;
+      gap: 40px;
   }
 
   &__avatar {
