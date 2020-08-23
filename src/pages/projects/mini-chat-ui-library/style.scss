@@ -1,7 +1,7 @@
 .project-grid {
   width: 80vw;
   margin: 0 auto;
-  padding: 32px 16px;
+  padding: 90px 16px 32px;
   gap: 40px;
   display: grid;
   grid-template-columns: 3fr 1fr;
@@ -68,11 +68,22 @@
 }
 
 .sidebar {
-  border-left: 1px solid #dadde1;
+  
+  &--fixed{
+    border-left: 1px solid #dadde1;
+    position: fixed;
+  }
 
   &__link-box {
     list-style-type: none;
     margin: 20px;
+    
+
+    :hover{
+      transition: 0.5s;
+      color: #007be2;
+      padding: 20px;
+    }
   }
 
   &__link {

@@ -1,5 +1,5 @@
 .nav{
-    position: sticky;
+    position: fixed;
     top: 0;
 
     width: 100vw;
@@ -7,9 +7,11 @@
     height: 60px;
     background-color: white;
     font-size: 17px;
-    padding: 8px 20px;
+    padding: 0 20px;
     box-shadow: 0 1px 2px 0 rgba(0,0,0,0.1);
-   
+
+    // animation-duration: 500ms;
+    // animation-name: slidedown;
 
     display: grid;
     grid-template-columns: 350px 1fr;
@@ -37,5 +39,23 @@
 
     &__option{
         margin: 0 25px;
+        min-height: 100%;
+        line-height: 57px;
+        box-sizing: border-box;
+        &:hover{
+            transition: 0.5s;
+            color: #007be2;
+            border-bottom: 3px solid #007be2;
+            box-sizing: border-box;
+        }
     }
 }
+
+// @keyframes slidedown {
+//     from{
+//         margin-top: -60px;
+//     }
+//     to {
+//         margin-top: 0;
+//     }
+// }
