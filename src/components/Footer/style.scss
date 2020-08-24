@@ -1,0 +1,22 @@
+.footer{
+    color: #EBEDF0;
+    background-color: #303846;
+    font-size: 16px;
+    margin-top: 60px;
+
+    &__content{
+        text-align: center;
+        padding: 12px;
+    }
+
+    &__link{
+        color: #EBEDF0;
+        text-decoration: none;
+        img{
+            position: relative;
+            display: inline-block;
+            height: 16px;
+            bottom: -2px;
+        }
+    }
+}
