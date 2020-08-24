@@ -16,14 +16,14 @@ const Nav: React.FC = () => {
   })
 
   return (
-    <nav className="nav">
-      <animated.div style={props} className="nav__avatar">
+    <animated.nav style={props} className="nav">
+      <div className="nav__avatar">
         <img src={Avatar} alt="Touxiang" />
         <div className="nav__name">
-          <Link to="/to">Hubert Zhu </Link>
+          <Link to="/home">Hubert Zhu</Link>
         </div>
-      </animated.div>
-      <animated.div style={props} className="nav__options">
+      </div>
+      <div className="nav__options">
         <div className="nav__option">
           <Link to="/aboutme">About Me</Link>
         </div>
@@ -36,8 +36,8 @@ const Nav: React.FC = () => {
         <div className="nav__option">
           <a href="https://github.com/Hubert-Zhu">GitHub</a>
         </div>
-      </animated.div>
-    </nav>
+      </div>
+    </animated.nav>
   )
 }
 
