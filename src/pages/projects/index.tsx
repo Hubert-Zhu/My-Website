@@ -21,14 +21,14 @@ const projects = [
     title: "Personal Blog",
     type: "Frontend Project",
     description: "Personal website based on Gatsby and GraphQL",
-    tags: ["Gatsby", "GraphQL", "Netlify CMS", "Sass", "Typescipt", "Responsive Design"],
+    tags: ["Gatsby", "GraphQL", "Netlify CMS", "Sass", "Typescipt", "Sass", "Responsive Design", "React-Spring/CSS"],
   },
   {
     link: project3,
     title: "goChat",
     type: "Fullstack Project",
     description: "Chatting application created with Vue, Express",
-    tags:["Vue","Express", "NodeJS", "MongoDB", "Mongoose", "socket"]
+    tags:["Vue","Express", "NodeJS", "MongoDB", "Mongoose", "Socket"]
   },
 ]
 
