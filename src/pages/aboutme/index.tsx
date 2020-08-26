@@ -2,7 +2,7 @@
 import React from "react"
 import { PageProps, graphql } from "gatsby"
 import "./style.scss"
-import Avatar from "./avatar.jpg"
+import Avatar from "../../images/shared/avatar.jpg"
 
 import Nav from "../../components/Navbar"
 import Footer from "../../components/Footer"

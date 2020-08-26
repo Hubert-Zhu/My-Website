@@ -1,0 +1,40 @@
+.post-item {
+  background-color: rgb(255, 255, 255);
+  border-radius: 6px;
+  padding: 20px;
+  margin: 10px 20px;
+  box-shadow: 0 5px 10px -1.25px rgba(10, 10, 10, 0.1),
+    0 0 0 1px rgba(10, 10, 10, 0.02);
+
+  & > a {
+    text-decoration: none;
+    color: #363636;
+  }
+  &__title {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 10px 0;
+  }
+
+  &__date {
+    font-size: 16px;
+    font-weight: 200;
+    color: #4a4a4a;
+    margin: 10px 0;
+  }
+
+  &__description {
+    font-size: 16px;
+    margin: 10px 0;
+  }
+
+  &__tag {
+    display: inline-block;
+    margin: 4px;
+    padding: 6px;
+    border-radius: 8px;
+    font-size: 16px;
+    color: #ffffff;
+    background-color: #59a5d8;
+  }
+}
