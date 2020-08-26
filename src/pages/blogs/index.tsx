@@ -4,8 +4,10 @@ import blogIcon from "../../images/blogs/blog.svg"
 import "./style.scss"
 import Footer from "../../components/Footer"
 import Navbar from "../../components/Navbar"
+import PostList from "../../components/PostList"
 
-const Blogs = React.memo(() => {
+const Blogs = ({ data: { posts }}) => {
+
   return (
     <div>
       <Navbar />
@@ -18,14 +20,38 @@ const Blogs = React.memo(() => {
           </div>
           <div className="blogs__line"></div>
         </div>
+
+        <PostList posts={posts.edges}/>
       </div>
       <Footer />
     </div>
   )
-})
+}
 
 export default Blogs
 
+export const blogQuery = graphql`
+  query BlogQuery {
+    posts:allMarkdownRemark(
+      sort: { fields: frontmatter___date, order: DESC }
+      filter: { frontmatter: { layout: { eq: "blog-post" } } }
+    ) {
+      edges {
+        node {
+          id
+          excerpt(pruneLength: 200)
+          frontmatter {
+            date(formatString: "MMMM DD, YYYY")
+            tags
+            title
+            description
+            slug
+          }
+        }
+      }
+    }
+  }
+`
 
 // import React, { useState } from 'react'
 // import PropTypes from 'prop-types'
