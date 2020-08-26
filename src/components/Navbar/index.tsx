@@ -2,7 +2,7 @@ import React from "react"
 import { PageProps, graphql, Link } from "gatsby"
 import "./style.scss"
 import { useSpring, animated } from "react-spring"
-import Avatar from "./avatar.jpg"
+import Avatar from "../../images/shared/avatar.jpg"
 
 const Nav: React.FC = () => {
   const props = useSpring({

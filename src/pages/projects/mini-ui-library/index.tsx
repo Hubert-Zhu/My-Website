@@ -3,9 +3,9 @@ import React from "react"
 import Navbar from "../../../components/Navbar/index"
 import { PageProps, graphql } from "gatsby"
 import "./style.scss"
-import demoImage from "./demo.jpg"
-import demopage from "./demopage.png"
-import storypage from "./storypage.png"
+import demoImage from "../../../images/projects/mini-ui-library/demo.jpg"
+import demopage from "../../../images/projects/mini-ui-library/demopage.png"
+import storypage from "../../../images/projects/mini-ui-library/storypage.png"
 import { animated, useSpring } from "react-spring"
 
 const links = [
