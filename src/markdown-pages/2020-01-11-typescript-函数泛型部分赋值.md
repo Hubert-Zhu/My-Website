@@ -1,14 +1,9 @@
 ---
-layout: blog-post
 draft: false
 slug: "1"
 date: 2020-07-14T13:41:07.698Z
 title: 如何在 Sass 中方便引用祖先选择器
 description: Sass 提供了双亲选择器 & 用以在嵌套选择器中引用外部的选择器，本文聊聊如何进一步往外引用，为当前选择器添加祖先选择器。
-quote:
-  content: We must strive to become good ancestors.
-  author: Ralph Nader
-  source: ""
 tags:
   - Sass
   - CSS
