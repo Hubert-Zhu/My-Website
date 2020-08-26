@@ -35,6 +35,16 @@
 
     &__name {
       color: white;
+      & > a{
+        color: white;
+      }
+    }
+
+    &__option{
+      & > a {
+        text-decoration: none;
+        color: white;
+      }
     }
   }
 }

@@ -1,7 +1,7 @@
 * {
   margin: 0;
   padding: 0;
-  font-family:  Helvetica, sans-serif;
+  font-family: Calibri, Helvetica, sans-serif;
 }
 
 html {
@@ -28,7 +28,7 @@ html {
   }
 
   &__name {
-    font-size: 40px;
+    font-size: 48px;
     margin-bottom: 20px;
     span {
       color: #007be2;
@@ -36,7 +36,7 @@ html {
   }
 
   &__self-intro {
-    font-size: 17px;
+    font-size: 20px;
     margin: 10px;
   }
 }
@@ -53,15 +53,16 @@ html {
   width: 80vw;
   margin: 0 auto;
   padding: 0 5vw;
-
+  
+ 
 
   &__unit {
-    max-width: 60%;
+    max-width: 600px;
     margin: 20px 0;
   }
 
   &__title {
-    font-size: 30px;
+    font-size: 40px;
     margin: 50px 0px 12px;
   }
 
@@ -72,8 +73,8 @@ html {
   }
 
   &__items {
-    line-height: 22px;
-    font-size: 18px;
+    line-height: 24px;
+    font-size: 20px;
 
   }
 }
