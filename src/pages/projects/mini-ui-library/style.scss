@@ -28,8 +28,8 @@
   }
 
   &__description {
-    font-size: 16px;
-    line-height: 24px;
+    font-size: 20px;
+    line-height: 30px;
 
     a {
       color: #007be2;
@@ -52,14 +52,15 @@
 .technology {
   &__list {
     list-style-position: inside;
-    font-weight: bold;
-    font-size: 17xpx;
+    // font-weight: bold;
+    font-size: 24px;
+    margin: 5px 0;
   }
 
   &__sublist{
-    font-size: 16px;
-    font-weight: 100;
+    font-size: 20px;
     padding-left: 20px;
+    margin: 5px 0;
     span {
         color: #606770;
     }
@@ -90,5 +91,6 @@
     text-decoration: none;
     font-size: 20px;
     color: #606770;
+  
   }
 }
