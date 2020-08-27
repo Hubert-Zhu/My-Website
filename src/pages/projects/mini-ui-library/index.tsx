@@ -5,7 +5,7 @@ import { animated, useSpring } from "react-spring"
 
 import Navbar from "../../../components/Navbar/index"
 
-import demoImage from "../../../images/projects/mini-ui-library/Project1.jpg"
+import demoImage from "../../../images/projects/mini-ui-library/project1.jpg"
 import demopage from "../../../images/projects/mini-ui-library/demopage.png"
 import storypage from "../../../images/projects/mini-ui-library/storypage.png"
 
@@ -43,7 +43,7 @@ const project = () => {
       <Navbar />
       <div className="project-grid">
         <div className="content">
-          <h1 className="content__title">Mini-Chat-UI-library</h1>
+          <h1 className="content__title">Mini Chat Library</h1>
           <div className="content__demo-image">
             <img src={demoImage} alt="Demo Page" />
           </div>

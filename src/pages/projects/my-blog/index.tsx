@@ -5,9 +5,7 @@ import { animated, useSpring } from "react-spring"
 
 import Navbar from "../../../components/Navbar/index"
 
-import demoImage from "../../../images/projects/mini-ui-library/demo.jpg"
-import demopage from "../../../images/projects/mini-ui-library/demopage.png"
-import storypage from "../../../images/projects/mini-ui-library/storypage.png"
+import demoImage from "../../../images/projects/my-blog/project2.png"
 
 // import "./style.scss"
 
@@ -41,9 +39,10 @@ const project = () => {
   return (
     <div>
       <Navbar />
+
       <div className="project-grid">
         <div className="content">
-          <h1 className="content__title">Mini-Chat-UI-library</h1>
+          <h1 className="content__title">Personal Website</h1>
           <div className="content__demo-image">
             <img src={demoImage} alt="Demo Page" />
           </div>
@@ -52,29 +51,29 @@ const project = () => {
             <h2 className="content__subtitle">Summary</h2>
             <div className="content__description">
               <div>
-                This project is a <b>UI Components Library for React.</b> 📚
+                This project is a{" "}
+                <b>Personal Website based on GatsbyJS and GraphQL.</b>
               </div>
               <div>
-                I used several UI libraries before, such as{" "}
-                <a href="https://material-ui.com/">Materal-UI</a>,{" "}
-                <a href="https://ant.design/">Ant-design</a>,{" "}
-                <a href="https://element.eleme.io/#/en-US">Element-UI</a>, etc.
-                They are super useful. The reason why I build this project is
-                that I want to challenage myself to see what is the difficulties
-                to build a UI Library. Therefore, I started working on this
-                project. The design was from{" "}
-                <a href="https://dribbble.com/pecherits4">Anton Pecheritsa</a>{" "}
-                on Dribbble. He is a awesome web designor. Until September,
-                there are more than 60 components in this Library. I also create
-                5 demo pages by using these components.
-                {/* but I have to confess that they still have some drawbacks.
-                Sometime I cannot find the component that I want. Meanwhile, It
-                is hard to change style of components in library when I import
-                them into pages, as I need to consider the weight of CSS and
-                other factors. Also, The APIs that they have are so limited,
-                that some functionalities cannot be achieved. I believe those
-                problem are hard to solve, because everyone has different
-                demands for their project. */}
+                I have used React and RESTful for one year. During last year, I
+                have heard <a href="https://www.gatsbyjs.com/">GatsbyJS</a>,{" "}
+                <a href="https://nextjs.org/">NextJS</a>,{" "}
+                <a href="https://graphql.org/">GraphQL</a> so many times, but
+                have not got any chance to learn and create a demo with them
+                until I built this Project. For building this new site, I did
+                countless research. Finally, I chose "Gatsby + Typescript + Sass
+                + Netlify + Netlify CMS" to develop this site. Here are some
+                reasons why I chose them. First, the Gatsby Plugins Ecosystem is
+                mature, as there are at least 2000 plugins right now. Therefore,
+                I can quickly add new features to my website by embedding these
+                plugins. It saves my time from making new wheel and setting
+                complex configuration. Moreover, I like their data management
+                strategy. I do not need to waste my time on building back-end or
+                setting up database. As I just need to store the blog content, I
+                can use "markdown files + markdown transferring plugin + Netlify
+                CMS" to achieve this feature without database. To show the
+                blogs, "GraphQL + Template + Gatsby API" is perfect combo. I
+                will write a blog called “why Gatsby“ in my blog section.
               </div>
             </div>
           </div>
@@ -86,25 +85,33 @@ const project = () => {
                 <li className="technology__list">
                   Framework:
                   <ul className="technology__sublist">
-                    <li>React + Hook</li>
+                    <li>
+                      GatsbyJS{" "}
+                      <span>--- React-based open source framework</span>
+                    </li>
                   </ul>
                 </li>
                 <li className="technology__list">
                   Tool:
                   <ul className="technology__sublist">
                     <li>
-                      Styled-Components <span>--- Manage style</span>
+                      SASS <span>--- Manage style</span>
                     </li>
                     <li>
-                      Storybook <span>--- Component documentation </span>
+                      GraphQL <span>--- Queries with existing data</span>
+                    </li>
+                    <li>
+                      Netlify CMS <span>--- Content Management System</span>
                     </li>
                     <li>
                       React Spring{" "}
-                      <span>--- spring-physics based animation library</span>
+                      <span>--- Spring-physics based animation library</span>
                     </li>
                     <li>
-                      React Router{" "}
-                      <span>--- collection of navigational components</span>
+                      Gatsby Plugins{" "}
+                      <span>
+                        --- Improve performance, scalability, and security
+                      </span>
                     </li>
                   </ul>
                 </li>
@@ -112,8 +119,7 @@ const project = () => {
                   Infrastructure:
                   <ul className="technology__sublist">
                     <li>
-                      Google Cloud Firebase{" "}
-                      <span>--- deploy and backend data</span>
+                      Netlify <span>--- cloud service</span>
                     </li>
                   </ul>
                 </li>
@@ -124,16 +130,7 @@ const project = () => {
           <div>
             <h2 className="content__subtitle">SnapShot</h2>
             <div className="content__description">
-              <img
-                className="content__snapshot"
-                src={demopage}
-                alt="demo-page"
-              />
-              <img
-                className="content__snapshot"
-                src={storypage}
-                alt="story-page"
-              />
+              You are visiting this project right now, so I think I do not need to place a snapshot here?  😂  😂  😂 
             </div>
           </div>
 
@@ -141,15 +138,12 @@ const project = () => {
             <h2 className="content__subtitle">Links</h2>
             <div className="content__description">
               <div>
-                UI Library: <a href="#">N/A</a>{" "}
-              </div>
-              <div>
                 Demo Pages: <a href="#">N/A</a>
               </div>
               <div>
                 Source code:{" "}
-                <a href="https://github.com/Hubert-Zhu/Mini-UI-Library">
-                  https://github.com/Hubert-Zhu/Mini-UI-Library
+                <a href="https://github.com/Hubert-Zhu/My-Blog">
+                  https://github.com/Hubert-Zhu/My-Blog
                 </a>
               </div>
             </div>
