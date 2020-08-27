@@ -1,12 +1,14 @@
 // If you don't want to use TypeScript you can delete this file!
 import React from "react"
 import { PageProps, graphql } from "gatsby"
-import Avatar from "../../images/shared/avatar.jpg"
 import { useSpring, animated } from "react-spring"
 
+import Navbar from "../../components/Navbar"
+
+import Avatar from "../../images/shared/avatar.jpg"
 import "./style.scss"
 
-import Nav from "../../components/Navbar"
+
 
 type DataProps = {
   site: {
@@ -28,7 +30,7 @@ const UsingTypescript: React.FC<PageProps<DataProps>> = ({ data, path }) => {
   return (
     <>
       <div className="home">
-        <Nav />
+        <Navbar />
         <div className="home__wrap">
 
           <animated.div style={animation} className="home__avatar">

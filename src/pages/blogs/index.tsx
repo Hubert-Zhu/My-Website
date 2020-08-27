@@ -1,10 +1,13 @@
 import React from "react"
 import { graphql, withPrefix, useStaticQuery } from "gatsby"
+
+import Navbar from "../../components/Navbar"
+import Footer from "../../components/Footer"
+import PostList from "../../components/PostList"
+
 import blogIcon from "../../images/blogs/blog.svg"
 import "./style.scss"
-import Footer from "../../components/Footer"
-import Navbar from "../../components/Navbar"
-import PostList from "../../components/PostList"
+
 
 const Blogs = ({ data: { posts }}) => {
 

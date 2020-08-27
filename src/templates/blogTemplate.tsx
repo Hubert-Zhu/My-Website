@@ -2,7 +2,7 @@ import React from "react"
 import { graphql, Link } from "gatsby"
 import Content, { HTMLContent } from "../components/Content"
 import Layout from "../components/Layout"
-import Navbar from "../components/Navbar"
+// import Navbar from "../components/Navbar"
 import "./style.scss"
 import "./codestyle.scss"
 

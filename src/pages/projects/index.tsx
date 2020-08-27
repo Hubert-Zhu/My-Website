@@ -1,12 +1,17 @@
 import React from "react"
 import { graphql, withPrefix, useStaticQuery } from "gatsby"
+
+import Navbar from "../../components/Navbar"
+import Footer from "../../components/Footer"
+
 import Project from "../../images/projects/project.svg"
 import project1 from "../../images/projects/project1.jpg"
 import project2 from "../../images/projects/project2.png"
 import project3 from "../../images/projects/project3.jpg"
+
 import "./style.scss"
-import Footer from "../../components/Footer"
-import Navbar from "../../components/Navbar"
+
+
 
 const projects = [
   {

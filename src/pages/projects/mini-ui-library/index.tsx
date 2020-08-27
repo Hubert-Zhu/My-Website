@@ -1,12 +1,15 @@
 // If you don't want to use TypeScript you can delete this file!
 import React from "react"
-import Navbar from "../../../components/Navbar/index"
 import { PageProps, graphql } from "gatsby"
-import "./style.scss"
+import { animated, useSpring } from "react-spring"
+
+import Navbar from "../../../components/Navbar/index"
+
 import demoImage from "../../../images/projects/mini-ui-library/demo.jpg"
 import demopage from "../../../images/projects/mini-ui-library/demopage.png"
 import storypage from "../../../images/projects/mini-ui-library/storypage.png"
-import { animated, useSpring } from "react-spring"
+
+import "./style.scss"
 
 const links = [
   {

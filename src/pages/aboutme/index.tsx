@@ -1,11 +1,12 @@
 // If you don't want to use TypeScript you can delete this file!
 import React from "react"
 import { PageProps, graphql } from "gatsby"
-import "./style.scss"
-import Avatar from "../../images/shared/avatar.jpg"
 
-import Nav from "../../components/Navbar"
+import Navbar from "../../components/Navbar"
 import Footer from "../../components/Footer"
+
+import Avatar from "../../images/shared/avatar.jpg"
+import "./style.scss"
 
 type DataProps = {
   site: {
@@ -15,7 +16,7 @@ type DataProps = {
 
 const UsingTypescript: React.FC<PageProps<DataProps>> = ({ data, path }) => (
   <div>
-    <Nav />
+    <Navbar />
 
     <div className="intro">
       <img className="intro__avatar" src={Avatar} alt="touxiang" />

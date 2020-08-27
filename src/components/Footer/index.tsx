@@ -1,6 +1,8 @@
 import React from 'react'
 import { graphql, withPrefix, useStaticQuery } from 'gatsby'
+
 import Gatsby from "../../images/Footer/gatsby.svg"
+
 import "./style.scss"
 
 const Footer = React.memo(() => {

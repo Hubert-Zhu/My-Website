@@ -1,8 +1,10 @@
 import React from "react"
 import { PageProps, graphql, Link } from "gatsby"
-import "./style.scss"
 import { useSpring, animated } from "react-spring"
+
 import Avatar from "../../images/shared/avatar.jpg"
+
+import "./style.scss"
 
 const Nav: React.FC = () => {
   const props = useSpring({
