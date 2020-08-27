@@ -1,0 +1,97 @@
+.footer{
+    color: #EBEDF0;
+    background-color: #303846;
+    font-size: 16px;
+    margin-top: 60px;
+
+    &__content{
+        text-align: center;
+        padding: 12px;
+    }
+
+    &__link{
+        color: #EBEDF0;
+        text-decoration: none;
+        img{
+            position: relative;
+            display: inline-block;
+            height: 16px;
+            bottom: -2px;
+        }
+    }
+}
+
+.nav {
+    position: fixed;
+    top: 0;
+  
+    width: 100vw;
+    box-sizing: border-box;
+    height: 60px;
+    background-color: white;
+    font-size: 20px;
+    padding: 0 20px;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+  
+    // animation-duration: 500ms;
+    // animation-name: slidedown;
+  
+    display: grid;
+    grid-template-columns: 200px 1fr;
+  
+    &__avatar {
+      display: flex;
+      align-items: center;
+      img {
+        display: block;
+        max-height: 32px;
+        max-width: 32px;
+        border-radius: 50%;
+      }
+    }
+  
+    &__name {
+      & > a {
+        text-decoration: none;
+        color: black;
+      }
+      margin: 0 10px;
+    }
+  
+    &__options {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+    }
+  
+    &__option {
+      margin: 0 25px;
+      min-height: 100%;
+      line-height: 57px;
+      box-sizing: border-box;
+      &:hover {
+        transition: 0.5s;
+        color: #007be2;
+        box-sizing: border-box;
+      }
+      & > a {
+        text-decoration: none;
+        color: black;
+        &:hover {
+          transition: 0.5s;
+          color: #007be2;
+          box-sizing: border-box;
+        }
+      }
+    }
+  }
+  
+  // @keyframes slidedown {
+  //     from{
+  //         margin-top: -60px;
+  //     }
+  //     to {
+  //         margin-top: 0;
+  //     }
+  // }
+  
