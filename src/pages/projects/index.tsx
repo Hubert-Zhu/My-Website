@@ -5,8 +5,8 @@ import Navbar from "../../components/Navbar"
 import Footer from "../../components/Footer"
 
 import Project from "../../images/projects/project.svg"
-import project1 from "../../images/projects/project1.jpg"
-import project2 from "../../images/projects/project2.png"
+import project1 from "../../images/projects/mini-ui-library/project1.jpg"
+import project2 from "../../images/projects/my-blog/project2.png"
 import project3 from "../../images/projects/project3.jpg"
 
 import "./style.scss"
