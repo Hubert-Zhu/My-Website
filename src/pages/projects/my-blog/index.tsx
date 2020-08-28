@@ -149,7 +149,7 @@ const project = () => {
               <div>
                 Source code:{" "}
                 <a href="https://github.com/Hubert-Zhu/My-Blog">
-                  https://github.com/Hubert-Zhu/My-Blog
+                  github.com/Hubert-Zhu/My-Blog
                 </a>
               </div>
             </div>

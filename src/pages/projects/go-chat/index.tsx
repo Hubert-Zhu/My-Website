@@ -49,9 +49,7 @@ const project = () => {
               <div>
                 <b>Online Chatting room.</b> 📚
               </div>
-              <div>
-              = Building
-              </div>
+              <div>Building ... 😄😄😄</div>
             </div>
           </div>
 
@@ -62,8 +60,12 @@ const project = () => {
                 <li className="technology__list">
                   Framework:
                   <ul className="technology__sublist">
-                    <li>React <span> --- Front-end</span></li>
-                    <li>Express <span> --- Back-end</span></li>
+                    <li>
+                      Vue <span> --- Front-end</span>
+                    </li>
+                    <li>
+                      Express <span> --- Back-end</span>
+                    </li>
                   </ul>
                 </li>
                 <li className="technology__list">
@@ -73,24 +75,21 @@ const project = () => {
                       Sass <span>--- Manage style</span>
                     </li>
                     <li>
+                      Vuex <span>--- State management pattern + library </span>
+                    </li>
+
+                    <li>
                       MongoDB <span>--- Database</span>
                     </li>
                     <li>
-                      Mongoose{" "}
-                      <span>--- Tool for MongoDB</span>
-                    </li>
-                    <li>
-                      React Router{" "}
-                      <span>--- collection of navigational components</span>
+                      Mongoose <span>--- Tool for MongoDB</span>
                     </li>
                   </ul>
                 </li>
                 <li className="technology__list">
                   Infrastructure:
                   <ul className="technology__sublist">
-                    <li>
-                      N/A
-                    </li>
+                    <li>N/A</li>
                   </ul>
                 </li>
               </ul>
@@ -121,8 +120,8 @@ const project = () => {
               </div>
               <div>
                 Source code:{" "}
-                <a href="https://github.com/Hubert-Zhu/Mini-UI-Library">
-                  https://github.com/Hubert-Zhu/Mini-UI-Library
+                <a href="https://github.com/Hubert-Zhu/goChat">
+                  github.com/Hubert-Zhu/goChat
                 </a>
               </div>
             </div>

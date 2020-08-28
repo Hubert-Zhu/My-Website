@@ -49,7 +49,7 @@ const projects = [
     type: "Fullstack Project",
     description: "Chatting application created with Vue, Express",
     tags: ["Vue", "Express", "NodeJS", "MongoDB", "Mongoose", "Socket"],
-    to:"/#"
+    to:"go-chat"
   },
 ]
 

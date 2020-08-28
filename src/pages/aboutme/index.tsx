@@ -6,6 +6,10 @@ import Navbar from "../../components/Navbar"
 import Footer from "../../components/Footer"
 
 import Avatar from "../../images/shared/avatar.jpg"
+import github from "../../images/aboutme/github.png"
+import linkedin from "../../images/aboutme/linkedin.png"
+import email from "../../images/aboutme/email.png"
+
 import "./style.scss"
 
 type DataProps = {
@@ -86,26 +90,41 @@ const UsingTypescript: React.FC<PageProps<DataProps>> = ({ data, path }) => (
       <div className="tool-box__unit">
         <p className="tool-box__unit-topic">Other Tools:</p>
         <p className="tool-box__items">
-          Git/GitHub, Styled-Component, React-Router, React-Spring, Redux, Vuex, Gulp, Grunt, Storybook,
-          Postman, Webpack, Rollup, Parcel, Jest, Enzyme, Netlify, Apache
-          Echarts, Google Firebase
+          Git/GitHub, Styled-Component, React-Router, React-Spring, Redux, Vuex,
+          Gulp, Grunt, Storybook, Postman, Webpack, Rollup, Parcel, Jest,
+          Enzyme, Netlify, Apache Echarts, Google Firebase
         </p>
       </div>
     </div>
 
     <div className="hr--gray"></div>
 
-
     <div className="contact">
-      <h2 className="contact__title" >Contact Me </h2>
-      
-      <div className="contact__item" >Linkdin: <a href="https://www.linkedin.com/in/hubert-zhu-23002b19b/"> https://www.linkedin.com/in/hubert-zhu-23002b19b </a></div>
+      <h2 className="contact__title">Contact Me </h2>
 
-      <div className="contact__item" >Email: <a href="mailto: zhubolin010118@gmail.com">  zhubolin010118@gmail.com </a></div>
-      
-      <div className="contact__item" >Github: <a href="https://github.com/Hubert-Zhu">  https://github.com/Hubert-Zhu</a></div>
+      <div className="contact__item">
+        <img className="contact__icon"  src={linkedin} alt="icon" />
+        <div>Linkdin:</div>
+        <a href="https://www.linkedin.com/in/hubert-zhu-23002b19b/">
+          www.linkedin.com/in/hubert-zhu-23002b19b{" "}
+        </a>
+      </div>
+
+      <div className="contact__item">
+        <img className="contact__icon" src={email} alt="icon" />
+        <div>Email:</div>
+        <a href="mailto: zhubolin010118@gmail.com">
+  
+          zhubolin010118@gmail.com{" "}
+        </a>
+      </div>
+
+      <div className="contact__item">
+        <img className="contact__icon"  src={github} alt="icon" />
+        <div>Github:</div>
+        <a href="https://github.com/Hubert-Zhu"> github.com/Hubert-Zhu</a>
+      </div>
     </div>
-    
 
     <Footer />
   </div>

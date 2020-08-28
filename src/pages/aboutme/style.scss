@@ -93,12 +93,18 @@ html {
   &__item{
     font-size: 20px;
     margin: 20px 0;
+    max-height: 100%;
     
     display:grid;
-    grid-template-columns: 80px 1fr;
+    grid-template-columns: 40px 80px 1fr;
     a{
       color: #007BE2;
       text-decoration: none;
     }
+  }
+
+  &__icon{
+    max-width: 20px;
+    margin-top: 2px;
   }
 }

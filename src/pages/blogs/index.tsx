@@ -5,7 +5,7 @@ import Navbar from "../../components/Navbar"
 import Footer from "../../components/Footer"
 import PostList from "../../components/PostList"
 
-import blogIcon from "../../images/blogs/blog.svg"
+import blogIcon from "../../images/blogs/blog-icon.svg"
 import "./style.scss"
 
 
@@ -37,7 +37,6 @@ export const blogQuery = graphql`
   query BlogQuery {
     posts:allMarkdownRemark(
       sort: { fields: frontmatter___date, order: DESC }
-      filter: { frontmatter: { layout: { eq: "blog-post" } } }
     ) {
       edges {
         node {
