@@ -78,10 +78,10 @@
   &__link-box {
     list-style-type: none;
     margin: 20px;
-    
+    padding: 0;
 
     :hover{
-      transition: 0.5s;
+      transition: 400ms linear;
       color: #007be2;
       padding: 20px;
     }
