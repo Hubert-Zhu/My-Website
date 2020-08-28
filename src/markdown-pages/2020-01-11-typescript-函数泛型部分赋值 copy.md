@@ -1,5 +1,4 @@
 ---
-layout: blog-post
 draft: false
 slug: "3"
 date: 2020-07-15T13:41:07.698Z

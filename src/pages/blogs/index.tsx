@@ -37,7 +37,6 @@ export const blogQuery = graphql`
   query BlogQuery {
     posts:allMarkdownRemark(
       sort: { fields: frontmatter___date, order: DESC }
-      filter: { frontmatter: { layout: { eq: "blog-post" } } }
     ) {
       edges {
         node {

@@ -149,7 +149,7 @@ const project = () => {
               <div>
                 Source code:{" "}
                 <a href="https://github.com/Hubert-Zhu/Mini-UI-Library">
-                  https://github.com/Hubert-Zhu/Mini-UI-Library
+                  github.com/Hubert-Zhu/Mini-UI-Library
                 </a>
               </div>
             </div>
