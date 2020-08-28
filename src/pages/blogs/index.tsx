@@ -5,7 +5,7 @@ import Navbar from "../../components/Navbar"
 import Footer from "../../components/Footer"
 import PostList from "../../components/PostList"
 
-import blogIcon from "../../images/blogs/blog.svg"
+import blogIcon from "../../images/blogs/blog-icon.svg"
 import "./style.scss"
 
 
