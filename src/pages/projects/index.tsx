@@ -7,7 +7,7 @@ import Footer from "../../components/Footer"
 import Project from "../../images/projects/project.svg"
 import project1 from "../../images/projects/mini-ui-library/project1.jpg"
 import project2 from "../../images/projects/my-blog/project2.png"
-import project3 from "../../images/projects/project3.jpg"
+import project3 from "../../images/projects/go-chat/project3.jpg"
 
 import "./style.scss"
 
