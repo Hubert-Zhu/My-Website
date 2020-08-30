@@ -2,6 +2,7 @@ import React from "react"
 import { Link } from "gatsby"
 
 import Navbar from "../../components/Navbar"
+import IconTitle from "../../components/IconTitle"
 import Footer from "../../components/Footer"
 
 import Project from "../../images/projects/project.svg"
@@ -24,7 +25,7 @@ const projects = [
       "Storybook",
       "Google Firebase",
     ],
-    to: "mini-ui-library"
+    to: "mini-ui-library",
   },
   {
     link: project2,
@@ -41,7 +42,7 @@ const projects = [
       "Responsive Design",
       "React-Spring/CSS",
     ],
-    to:"my-blog"
+    to: "my-blog",
   },
   {
     link: project3,
@@ -49,7 +50,7 @@ const projects = [
     type: "Fullstack Project",
     description: "Chatting application created with Vue, Express",
     tags: ["Vue", "Express", "NodeJS", "MongoDB", "Mongoose", "Socket"],
-    to:"go-chat"
+    to: "go-chat",
   },
 ]
 
@@ -57,38 +58,30 @@ const Projects = React.memo(() => {
   return (
     <div>
       <Navbar />
-      <div className={"projects"}>
-        <h1 className={"projects__title"}>Personal Projects</h1>
-        <div className={"projects__icon-container"}>
-          <div className="projects__line"></div>
-          <div>
-            <img className="projects__icon" src={Project} alt="icons" />
-          </div>
-          <div className="projects__line"></div>
-        </div>
+      <IconTitle title="Personal Project" Icon={Project} />
 
-        <div className="project">
-          {projects.map((item, index) => (
-            <div className="project__item" key={index}>
-              <Link to={item.to}>
-                <h2 className="project__title">{item.title}</h2>
-                <img src={item.link} className="project__image" />
+      <div className="project">
+        {projects.map((item, index) => (
+          <div className="project__item" key={index}>
+            <Link to={item.to}>
+              <h2 className="project__title">{item.title}</h2>
+              <img src={item.link} className="project__image" />
 
-                <h3 className="project__type">{item.type}</h3>
-                <p className="project__description">{item.description}</p>
-              </Link>
+              <h3 className="project__type">{item.type}</h3>
+              <p className="project__description">{item.description}</p>
+            </Link>
 
-              <div className="project__tags">
-                {item.tags.map((item, index) => (
-                  <div key={index} className="project__tag">
-                    #{item}
-                  </div>
-                ))}
-              </div>
+            <div className="project__tags">
+              {item.tags.map((item, index) => (
+                <div key={index} className="project__tag">
+                  #{item}
+                </div>
+              ))}
             </div>
-          ))}
-        </div>
+          </div>
+        ))}
       </div>
+
       <Footer />
     </div>
   )

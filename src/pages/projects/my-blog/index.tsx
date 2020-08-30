@@ -42,10 +42,13 @@ const project = () => {
 
       <div className="project-grid">
         <div className="content">
+
+          
           <h1 className="content__title">Personal Website</h1>
           <div className="content__demo-image">
             <img src={demoImage} alt="Demo Page" />
           </div>
+
 
           <div>
             <h2 className="content__subtitle">Summary</h2>

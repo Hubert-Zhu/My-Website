@@ -2,8 +2,10 @@ import React from "react"
 import { graphql, withPrefix, useStaticQuery } from "gatsby"
 
 import Navbar from "../../components/Navbar"
-import Footer from "../../components/Footer"
+import IconTitle from "../../components/IconTitle"
 import PostList from "../../components/PostList"
+import Footer from "../../components/Footer"
+
 
 import blogIcon from "../../images/blogs/blog-icon.svg"
 import "./style.scss"
@@ -15,15 +17,7 @@ const Blogs = ({ data: { posts }}) => {
     <div>
       <Navbar />
       <div className={"blogs"}>
-        <h1 className={"blogs__title"}>Personal Blogs</h1>
-        <div className={"blogs__icon-container"}>
-          <div className="blogs__line"></div>
-          <div>
-            <img className="blogs__icon" src={blogIcon} alt="icons" />
-          </div>
-          <div className="blogs__line"></div>
-        </div>
-
+        <IconTitle title={"Personal Blogs"} Icon={blogIcon}/>
         <PostList posts={posts.edges}/>
       </div>
       <Footer />

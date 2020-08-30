@@ -1,0 +1,26 @@
+.IconTitle {
+  margin-top: 90px;
+
+  &__title {
+    text-align: center;
+    font-size: 50px;
+  }
+
+  &__icon-container {
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  &__line {
+    height: 20px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #606770;
+    width: 100px;
+  }
+
+  &__icon {
+    height: 40px;
+  }
+}
