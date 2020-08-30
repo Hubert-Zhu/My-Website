@@ -41,7 +41,7 @@ const Nav: React.FC = () => {
       <div className="nav__avatar">
         <img src={Avatar} alt="Touxiang" />
         <div className="nav__name">
-          <Link to="/home">Hubert Zhu</Link>
+          <Link to="/">Hubert Zhu</Link>
         </div>
       </div>
 
