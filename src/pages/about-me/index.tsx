@@ -90,9 +90,9 @@ const UsingTypescript: React.FC<PageProps<DataProps>> = ({ data, path }) => (
       <div className="tool-box__unit">
         <p className="tool-box__unit-topic">Other Tools:</p>
         <p className="tool-box__items">
-          Git/GitHub, Styled-Component, React-Router, React-Spring, Redux, Vuex,
-          Gulp, Grunt, Storybook, Postman, Webpack, Rollup, Parcel, Jest,
-          Enzyme, Netlify, Apache Echarts, Google Firebase
+          Git/GitHub, Styled-Component, Redux, Vuex, Gulp, Grunt, Storybook,
+          Postman, Webpack, Rollup, Parcel, Jest, Enzyme, Netlify, Apache
+          Echarts, Google Firebase
         </p>
       </div>
     </div>
@@ -103,7 +103,7 @@ const UsingTypescript: React.FC<PageProps<DataProps>> = ({ data, path }) => (
       <h2 className="contact__title">Contact Me </h2>
 
       <div className="contact__item">
-        <img className="contact__icon"  src={linkedin} alt="icon" />
+        <img className="contact__icon" src={linkedin} alt="icon" />
         <div>Linkdin:</div>
         <a href="https://www.linkedin.com/in/hubert-zhu-23002b19b/">
           www.linkedin.com/in/hubert-zhu-23002b19b{" "}
@@ -113,14 +113,11 @@ const UsingTypescript: React.FC<PageProps<DataProps>> = ({ data, path }) => (
       <div className="contact__item">
         <img className="contact__icon" src={email} alt="icon" />
         <div>Email:</div>
-        <a href="mailto: zhubolin010118@gmail.com">
-  
-          zhubolin010118@gmail.com{" "}
-        </a>
+        <a href="mailto: zhubolin010118@gmail.com">zhubolin010118@gmail.com </a>
       </div>
 
       <div className="contact__item">
-        <img className="contact__icon"  src={github} alt="icon" />
+        <img className="contact__icon" src={github} alt="icon" />
         <div>Github:</div>
         <a href="https://github.com/Hubert-Zhu"> github.com/Hubert-Zhu</a>
       </div>

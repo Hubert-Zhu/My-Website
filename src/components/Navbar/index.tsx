@@ -6,6 +6,25 @@ import Avatar from "../../images/shared/avatar.jpg"
 
 import "./../commonStyle/style.scss"
 
+const links = [
+  {
+    title: "About Me",
+    link: "/about-me",
+  },
+  {
+    title: "Projects",
+    link: "/projects",
+  },
+  {
+    title: "Work Experience",
+    link: "/work-experience",
+  },
+  {
+    title: "Blogs",
+    link: "/blogs",
+  },
+]
+
 const Nav: React.FC = () => {
   const props = useSpring({
     transform: "translate3d(0px, 0px, 0px)",
@@ -25,16 +44,14 @@ const Nav: React.FC = () => {
           <Link to="/home">Hubert Zhu</Link>
         </div>
       </div>
+
       <div className="nav__options">
-        <div className="nav__option">
-          <Link to="/aboutme">About Me</Link>
-        </div>
-        <div className="nav__option">
-          <Link to="/projects">Projects</Link>
-        </div>
-        <div className="nav__option">
-          <Link to="/blogs">Blogs</Link>
-        </div>
+        {links.map((item, index) => (
+          <div className="nav__option" key={index}>
+            <Link to={item.link}>{item.title}</Link>
+          </div>
+        ))}
+
         <div className="nav__option">
           <a href="https://github.com/Hubert-Zhu">GitHub</a>
         </div>

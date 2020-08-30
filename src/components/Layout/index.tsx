@@ -32,18 +32,6 @@ const Layout = ({ title, description, children }) => {
         />
         <link rel="manifest" href="/manifest.json" />
         <meta name="theme-color" content="#fff" />
-        <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-        {/* <script>
-          if (window.netlifyIdentity) {
-             window.netlifyIdentity.on("init", user => {
-              if (!user) {
-            window.netlifyIdentity.on("login", () => {
-              document.location.href = "/admin/";
-              });
-         }
-         } );
-           }
-        </script> */}
       </Helmet>
 
       <div>{children}</div>

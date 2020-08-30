@@ -3,9 +3,9 @@ import React from "react"
 import { PageProps, graphql } from "gatsby"
 import { useSpring, animated } from "react-spring"
 
-import Navbar from "../../components/Navbar"
+import Navbar from "../components/Navbar"
 
-import Avatar from "../../images/shared/avatar.jpg"
+import Avatar from "../images/shared/avatar.jpg"
 import "./style.scss"
 
 
