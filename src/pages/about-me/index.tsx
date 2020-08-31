@@ -66,14 +66,16 @@ const UsingTypescript: React.FC<PageProps<DataProps>> = ({ data, path }) => (
       <div className="tool-box__unit">
         <p className="tool-box__unit-topic">Framework/Library:</p>
         <p className="tool-box__items">
-          React, Gatsby, Next, Vue, Bootstrap, jQuery, Express
+          React, Gatsby, Next, Vue, Bootstrap, jQuery, Express, React, Gatsby,
+          Next, Vue, Bootstrap, jQuery, Express, Material-UI, Ant-Design
         </p>
       </div>
 
       <div className="tool-box__unit">
         <p className="tool-box__unit-topic">Technologies: </p>
         <p className="tool-box__items">
-          RESTful API, GraphQL API, Ajax, Axios, SSR, Data Visualization
+          Responsive Design, RESTful, GraphQL, PWA, SSR, Data Visualization,
+          Serverless, SEO, CI/CD, BEM
         </p>
       </div>
 
@@ -90,9 +92,9 @@ const UsingTypescript: React.FC<PageProps<DataProps>> = ({ data, path }) => (
       <div className="tool-box__unit">
         <p className="tool-box__unit-topic">Other Tools:</p>
         <p className="tool-box__items">
-          Git/GitHub, Styled-Component, Redux, Vuex, Gulp, Grunt, Storybook,
-          Postman, Webpack, Rollup, Parcel, Jest, Enzyme, Netlify, Apache
-          Echarts, Google Firebase
+          Git/GitHub, Styled-Components, Redux, Vuex, Gulp, Grunt, Storybook,
+          Webpack, Rollup, Parcel, Postman, Jest, Enzyme, Netlify, Google
+          Firebase, Apache Echarts, ChartJS, CMS, Ajax/Axios
         </p>
       </div>
     </div>

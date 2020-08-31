@@ -1,16 +1,16 @@
-//   <div className="job">
-//   <div className="job__company-name">Wellness World</div>
-//   <div className="job__job-title">Frontend Develop</div>
-//   <div className="job__job-time">2020.05 - 2020.08</div>
-//   <div className="job__job-description">
+//   <div className="joblistlist">
+//   <div className="joblist__company-name">Wellness World</div>
+//   <div className="joblist__joblist-title">Frontend Develop</div>
+//   <div className="joblist__joblist-time">2020.05 - 2020.08</div>
+//   <div className="joblist__joblist-description">
 //     Wellness World works on developing Mental Wellness Platform for North
 //     American college/university students. I am the only front-end develop
-//     in the team. My job is to develop a MVP for our Saas. The platform
+//     in the team. My joblistlist is to develop a MVP for our Saas. The platform
 //     would be launched in 2020.09 in at least two North American
 //     Universities.
 //   </div>
 // </div>
-.job {
+.joblist {
   max-width: 85vw;
   margin: 50px auto;
   padding: 30px;
@@ -53,17 +53,17 @@
     grid-area: name;
   }
 
-  &__job-title {
+  &__joblist-title {
     font-size: 28px;
     grid-area: title;
   }
 
-  &__job-time {
+  &__joblist-time {
     font-size: 24px;
     grid-area: time;
   }
 
-  &__job-description {
+  &__joblist-description {
     font-size: 20px;
     grid-area: description;
   }

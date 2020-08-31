@@ -1,0 +1,112 @@
+.project-grid {
+    width: 80vw;
+    margin: 0 auto;
+    padding: 90px 16px 32px;
+    gap: 40px;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+  }
+  
+  .job {
+    &__title {
+      font-size: 40px;
+      margin-bottom: 25px;
+    }
+  
+
+    &__company-symbol {
+        
+      & > img {
+        max-width: 90%;
+        border-radius: 20px;
+      }
+
+      &--special-blue{
+        background-color: #e7f5ff;
+        border-radius: 20px;
+        min-height: 300px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        & > img{
+            max-width: 60%;
+        }
+      }
+    }
+  
+    &__subtitle {
+      //h2
+      margin: 40px 0px 20px;
+      font-size: 32px;
+    }
+  
+    &__description {
+      font-size: 20px;
+      line-height: 30px;
+      margin-left: 20px;
+  
+      a {
+        color: #007be2;
+        text-decoration: none;
+  
+        &:hover {
+          color: #005bff;
+        }
+      }
+    }
+  
+    &__snapshot{
+        display: block;
+        margin: 10px 0;
+        max-width: 100%;
+        border-radius: 20px;
+    }
+  }
+  
+  .technology {
+    &__list {
+      list-style-position: inside;
+      // font-weight: bold;
+      font-size: 24px;
+      margin: 5px 0;
+    }
+  
+    &__sublist{
+      font-size: 20px;
+      padding-left: 20px;
+      margin: 5px 0;
+      span {
+          color: #606770;
+      }
+        
+    }
+  }
+  
+  .sidebar {
+    
+    &--fixed{
+      border-left: 1px solid #dadde1;
+      position: fixed;
+    }
+  
+    &__link-box {
+      list-style-type: none;
+      margin: 20px;
+      padding: 0;
+  
+      :hover{
+        transition: 400ms linear;
+        color: #007be2;
+        padding: 20px;
+      }
+    }
+  
+    &__link {
+      text-decoration: none;
+      font-size: 20px;
+      color: #606770;
+    
+    }
+  }
+  

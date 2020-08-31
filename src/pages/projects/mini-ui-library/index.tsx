@@ -9,7 +9,7 @@ import demoImage from "../../../images/projects/mini-ui-library/project1.jpg"
 import demopage from "../../../images/projects/mini-ui-library/demopage.png"
 import storypage from "../../../images/projects/mini-ui-library/storypage.png"
 
-import "./style.scss"
+
 
 const links = [
   {

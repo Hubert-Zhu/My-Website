@@ -7,7 +7,7 @@ import Navbar from "../../../components/Navbar/index"
 
 import demoImage from "../../../images/projects/my-blog/project2.png"
 
-// import "./style.scss"
+
 
 const links = [
   {
