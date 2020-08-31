@@ -5,25 +5,24 @@ import { animated, useSpring } from "react-spring"
 
 import Navbar from "../../../components/Navbar/index"
 import demoImage from "../../../images/work-experience/job1/wellnessWorld.png"
+import scrollTo from "../../../util/scrollTo"
+
 
 import "./style.scss"
 const links = [
   {
-    name: "Summary",
-    herf: "#",
+    name: "Job Position",
+    herf: "#job-position",
   },
   {
-    name: "Technology",
-    herf: "#",
+    name: "Tech Stack",
+    herf: "#tech-stack",
   },
   {
-    name: "SnapShot",
-    herf: "#",
+    name: "Job Description",
+    herf: "#job-description",
   },
-  {
-    name: "Links",
-    herf: "#",
-  },
+ 
 ]
 
 const Job = () => {
@@ -44,8 +43,8 @@ const Job = () => {
             <img src={demoImage} alt="Demo Page" />
           </div>
 
-          <div>
-            <h2 className="job__subtitle">Job Position</h2>
+          <div id="job-position">
+            <h2  className="job__subtitle">Job Position</h2>
             <div className="job__description">
               <ul>
                 <li>Company: WellnesWorld</li>
@@ -59,7 +58,7 @@ const Job = () => {
           </div>
 
           <div>
-            <h2 className="job__subtitle">Tech Stack</h2>
+            <h2 id="tech-stack" className="job__subtitle">Tech Stack</h2>
 
             <ul className="technology">
               <li className="technology__list">
@@ -115,7 +114,7 @@ const Job = () => {
           </div>
 
           <div>
-            <h2 className="job__subtitle">Job Description</h2>
+            <h2 id="job-description" className="job__subtitle">Job Description</h2>
             <div className="job__description">
               <ul>
                 <li>
@@ -123,7 +122,7 @@ const Job = () => {
                   platform for North American Universities’ Students.{" "}
                 </li>
                 <li>
-                  <b>Took charge of all frontend tasks from the beginning</b>,
+                  <b>dTook charge of all frontend tasks from the beginning</b>,
                   and experienced two Beta tests in Agile Team.{" "}
                 </li>
                 <li>
@@ -173,10 +172,9 @@ const Job = () => {
                 style={sidebarAnimation}
                 className="sidebar__link-box"
                 key={index}
+                onClick = { ()=>{scrollTo(item.herf)}}
               >
-                <a className="sidebar__link" href={item.herf}>
                   {item.name}
-                </a>
               </animated.li>
             ))}
           </div>
