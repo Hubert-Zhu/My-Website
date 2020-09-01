@@ -8,6 +8,7 @@ import demoImage from "../../../images/work-experience/job1/WellnessWorld.png"
 import scrollTo from "../../../util/scrollTo"
 
 import "./style.scss"
+import { format } from "path"
 const links = [
   {
     name: "Job Position",
