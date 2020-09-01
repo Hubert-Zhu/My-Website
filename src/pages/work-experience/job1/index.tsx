@@ -5,24 +5,21 @@ import { animated, useSpring } from "react-spring"
 
 import Navbar from "../../../components/Navbar/index"
 import demoImage from "../../../images/work-experience/job1/wellnessWorld.png"
+import scrollTo from "../../../util/scrollTo"
 
 import "./style.scss"
 const links = [
   {
-    name: "Summary",
-    herf: "#",
+    name: "Job Position",
+    herf: "#job-position",
   },
   {
-    name: "Technology",
-    herf: "#",
+    name: "Tech Stack",
+    herf: "#tech-stack",
   },
   {
-    name: "SnapShot",
-    herf: "#",
-  },
-  {
-    name: "Links",
-    herf: "#",
+    name: "Job Description",
+    herf: "#job-description",
   },
 ]
 
@@ -37,14 +34,14 @@ const Job = () => {
   return (
     <div>
       <Navbar />
-      <div className="project-grid">
+      <div className="job-grid">
         <div className="job">
           <h1 className="job__title">Wellness World</h1>
           <div className="job__company-symbol--special-blue">
             <img src={demoImage} alt="Demo Page" />
           </div>
 
-          <div>
+          <div id="job-position">
             <h2 className="job__subtitle">Job Position</h2>
             <div className="job__description">
               <ul>
@@ -59,7 +56,9 @@ const Job = () => {
           </div>
 
           <div>
-            <h2 className="job__subtitle">Tech Stack</h2>
+            <h2 id="tech-stack" className="job__subtitle">
+              Tech Stack
+            </h2>
 
             <ul className="technology">
               <li className="technology__list">
@@ -113,9 +112,10 @@ const Job = () => {
               </li>
             </ul>
           </div>
-
           <div>
-            <h2 className="job__subtitle">Job Description</h2>
+            <h2 id="job-description" className="job__subtitle">
+              Job Description
+            </h2>
             <div className="job__description">
               <ul>
                 <li>
@@ -173,10 +173,11 @@ const Job = () => {
                 style={sidebarAnimation}
                 className="sidebar__link-box"
                 key={index}
+                onClick={() => {
+                  scrollTo(item.herf)
+                }}
               >
-                <a className="sidebar__link" href={item.herf}>
-                  {item.name}
-                </a>
+                {item.name}
               </animated.li>
             ))}
           </div>
