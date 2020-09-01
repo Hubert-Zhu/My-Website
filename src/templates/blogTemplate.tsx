@@ -1,8 +1,13 @@
 import React from "react"
 import { graphql, Link } from "gatsby"
+
+//Components
 import Content, { HTMLContent } from "../components/Content"
 import Layout from "../components/Layout"
-// import Navbar from "../components/Navbar"
+import Navbar from "../components/Navbar"
+import Footer from "../components/Footer"
+
+//Style
 import "./style.scss"
 import "./codestyle.scss"
 
@@ -59,8 +64,9 @@ const BlogPost = ({ data: { site, post }, pageContext }) => {
       title={`${title} | ${site.siteMetadata.title}`}
       description={`${description || post.excerpt}`}
     >
+       
       <div className="blog">
-        {/* <Navbar /> */}
+        <Navbar />
         <header className="blog__title-container">
           <h1 className="blog__title">{title}</h1>
           <div className="blog__date">{date}</div>
@@ -96,6 +102,7 @@ const BlogPost = ({ data: { site, post }, pageContext }) => {
           </div>
         </section>} */}
       </div>
+      <Footer />
     </Layout>
   )
 }

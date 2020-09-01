@@ -1,6 +1,9 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import { Helmet } from "react-helmet";
+
+//components
+import Navbar from "../Navbar/index"
 import Footer from "../Footer/index"
 
 const Layout = ({ title, description, children }) => {
@@ -33,10 +36,8 @@ const Layout = ({ title, description, children }) => {
         <link rel="manifest" href="/manifest.json" />
         <meta name="theme-color" content="#fff" />
       </Helmet>
-
       <div>{children}</div>
 
-      <Footer />
     </div>
   )
 }

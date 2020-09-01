@@ -4,7 +4,7 @@ import { PageProps, graphql } from "gatsby"
 import { animated, useSpring } from "react-spring"
 
 import Navbar from "../../../components/Navbar/index"
-import demoImage from "../../../images/work-experience/job1/wellnessWorld.png"
+import demoImage from "../../../images/work-experience/job1/WellnessWorld.png"
 import scrollTo from "../../../util/scrollTo"
 
 import "./style.scss"
