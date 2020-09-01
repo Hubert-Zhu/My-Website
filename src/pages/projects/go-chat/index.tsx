@@ -9,19 +9,19 @@ import demoImage from "../../../images/projects/go-chat/project3.jpg"
 const links = [
   {
     name: "Summary",
-    herf: "#",
+    herf: "#summary",
   },
   {
     name: "Technology",
-    herf: "#",
+    herf: "#technology",
   },
   {
     name: "SnapShot",
-    herf: "#",
+    herf: "#snapshot",
   },
   {
     name: "Links",
-    herf: "#",
+    herf: "#links",
   },
 ]
 
@@ -55,46 +55,44 @@ const project = () => {
 
           <div>
             <h2 className="content__subtitle">Technology</h2>
-            <div className="content__description">
-              <ul className="technology">
-                <li className="technology__list">
-                  Framework:
-                  <ul className="technology__sublist">
-                    <li>
-                      Vue <span> --- Front-end</span>
-                    </li>
-                    <li>
-                      Express <span> --- Back-end</span>
-                    </li>
-                  </ul>
-                </li>
-                <li className="technology__list">
-                  Tool:
-                  <ul className="technology__sublist">
-                    <li>
-                      Sass <span>--- Manage style</span>
-                    </li>
-                    <li>
-                      Vuex <span>--- State management pattern + library </span>
-                    </li>
 
-                    <li>
-                      MongoDB <span>--- Database</span>
-                    </li>
-                    <li>
-                      Mongoose <span>--- Tool for MongoDB</span>
-                    </li>
+            <ul className="technology">
+              <li className="technology__list">
+                Framework:
+                <ul className="technology__sublist">
+                  <li>
+                    Vue <span> --- Front-end</span>
+                  </li>
+                  <li>
+                    Express <span> --- Back-end</span>
+                  </li>
+                </ul>
+              </li>
+              <li className="technology__list">
+                Tool:
+                <ul className="technology__sublist">
+                  <li>
+                    Sass <span>--- Manage style</span>
+                  </li>
+                  <li>
+                    Vuex <span>--- State management pattern + library </span>
+                  </li>
 
-                  </ul>
-                </li>
-                <li className="technology__list">
-                  Infrastructure:
-                  <ul className="technology__sublist">
-                    <li>N/A</li>
-                  </ul>
-                </li>
-              </ul>
-            </div>
+                  <li>
+                    MongoDB <span>--- Database</span>
+                  </li>
+                  <li>
+                    Mongoose <span>--- Tool for MongoDB</span>
+                  </li>
+                </ul>
+              </li>
+              <li className="technology__list">
+                Infrastructure:
+                <ul className="technology__sublist">
+                  <li>Heroku</li>
+                </ul>
+              </li>
+            </ul>
           </div>
 
           <div>
@@ -104,11 +102,6 @@ const project = () => {
                 className="content__snapshot"
                 src={demopage}
                 alt="demo-page"
-              />
-              <img
-                className="content__snapshot"
-                src={storypage}
-                alt="story-page"
               /> */}
             </div>
           </div>
@@ -116,9 +109,9 @@ const project = () => {
           <div>
             <h2 className="content__subtitle">Links</h2>
             <div className="content__description">
-              <div>
+              {/* <div>
                 Demo Pages: <a href="#">N/A</a>
-              </div>
+              </div> */}
               <div>
                 Source code:{" "}
                 <a href="https://github.com/Hubert-Zhu/goChat">
