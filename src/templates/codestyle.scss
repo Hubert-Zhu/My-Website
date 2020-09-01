@@ -225,20 +225,6 @@ pre {
   }
 }
 
-.gatsby-highlight {
-  overflow: auto;
-  background-color: $background;
-
-  pre[class*="language-"] {
-    overflow: initial;
-    float: left;
-    // min-width: 100%;
-    margin: 0;
-    padding-left: $padding-left;
-    background-color: transparent;
-  }
-}
-
 .gatsby-highlight-code-line {
   position: relative;
   display: block;
@@ -250,8 +236,23 @@ pre {
 }
 
 .gatsby-highlight {
-  padding: 2em 1.5em;
+
+  overflow: auto;
+  background-color: $background;
+  margin: 20px 0;
+  padding: 20px 15px;
   border-radius: 5px;
+
+  pre[class*="language-"] {
+    overflow: initial;
+    float: left;
+    // min-width: 100%;
+    margin: 0;
+    padding-left: $padding-left;
+    background-color: transparent;
+  }
+
+
 
   pre[class*="language-"].line-numbers {
     position: relative;
