@@ -7,8 +7,6 @@ import Navbar from "../../../components/Navbar/index"
 
 import demoImage from "../../../images/projects/my-blog/project2.png"
 
-
-
 const links = [
   {
     name: "Summary",
@@ -147,7 +145,7 @@ const project = () => {
             <h2 className="content__subtitle">Links</h2>
             <div className="content__description">
               <div>
-                Demo Pages: <a href="#">N/A</a>
+                Demo Pages: <a href="https://www.hubert-zhu.com">hubert-zhu.com</a>
               </div>
               <div>
                 Source code:{" "}

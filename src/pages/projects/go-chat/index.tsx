@@ -84,6 +84,7 @@ const project = () => {
                     <li>
                       Mongoose <span>--- Tool for MongoDB</span>
                     </li>
+
                   </ul>
                 </li>
                 <li className="technology__list">

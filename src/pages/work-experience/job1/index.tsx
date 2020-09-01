@@ -7,7 +7,6 @@ import Navbar from "../../../components/Navbar/index"
 import demoImage from "../../../images/work-experience/job1/wellnessWorld.png"
 import scrollTo from "../../../util/scrollTo"
 
-
 import "./style.scss"
 const links = [
   {
@@ -22,7 +21,6 @@ const links = [
     name: "Job Description",
     herf: "#job-description",
   },
- 
 ]
 
 const Job = () => {
@@ -36,7 +34,7 @@ const Job = () => {
   return (
     <div>
       <Navbar />
-      <div className="project-grid">
+      <div className="job-grid">
         <div className="job">
           <h1 className="job__title">Wellness World</h1>
           <div className="job__company-symbol--special-blue">
@@ -44,7 +42,7 @@ const Job = () => {
           </div>
 
           <div id="job-position">
-            <h2  className="job__subtitle">Job Position</h2>
+            <h2 className="job__subtitle">Job Position</h2>
             <div className="job__description">
               <ul>
                 <li>Company: WellnesWorld</li>
@@ -58,7 +56,9 @@ const Job = () => {
           </div>
 
           <div>
-            <h2 id="tech-stack" className="job__subtitle">Tech Stack</h2>
+            <h2 id="tech-stack" className="job__subtitle">
+              Tech Stack
+            </h2>
 
             <ul className="technology">
               <li className="technology__list">
@@ -112,9 +112,10 @@ const Job = () => {
               </li>
             </ul>
           </div>
-
           <div>
-            <h2 id="job-description" className="job__subtitle">Job Description</h2>
+            <h2 id="job-description" className="job__subtitle">
+              Job Description
+            </h2>
             <div className="job__description">
               <ul>
                 <li>
@@ -122,7 +123,7 @@ const Job = () => {
                   platform for North American Universities’ Students.{" "}
                 </li>
                 <li>
-                  <b>dTook charge of all frontend tasks from the beginning</b>,
+                  <b>Took charge of all frontend tasks from the beginning</b>,
                   and experienced two Beta tests in Agile Team.{" "}
                 </li>
                 <li>
@@ -172,9 +173,11 @@ const Job = () => {
                 style={sidebarAnimation}
                 className="sidebar__link-box"
                 key={index}
-                onClick = { ()=>{scrollTo(item.herf)}}
+                onClick={() => {
+                  scrollTo(item.herf)
+                }}
               >
-                  {item.name}
+                {item.name}
               </animated.li>
             ))}
           </div>
