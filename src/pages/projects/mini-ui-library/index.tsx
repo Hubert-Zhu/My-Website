@@ -1,32 +1,35 @@
-// If you don't want to use TypeScript you can delete this file!
 import React from "react"
 import { PageProps, graphql } from "gatsby"
 import { animated, useSpring } from "react-spring"
 
+//Components
 import Navbar from "../../../components/Navbar/index"
+import Footer from "../../../components/Footer/index"
 
+//Image
 import demoImage from "../../../images/projects/mini-ui-library/project1.jpg"
 import demopage from "../../../images/projects/mini-ui-library/demopage.png"
 import storypage from "../../../images/projects/mini-ui-library/storypage.png"
 
+//function
+import scrollTo from "../../../util/scrollTo"
 
-
-const links = [
+const anchor = [
   {
     name: "Summary",
-    herf: "#",
+    herf: "#summary",
   },
   {
     name: "Technology",
-    herf: "#",
+    herf: "#technology",
   },
   {
     name: "SnapShot",
-    herf: "#",
+    herf: "#snapshot",
   },
   {
     name: "Links",
-    herf: "#",
+    herf: "#links",
   },
 ]
 
@@ -49,7 +52,9 @@ const project = () => {
           </div>
 
           <div>
-            <h2 className="content__subtitle">Summary</h2>
+            <h2 id="summary" className="content__subtitle">
+              Summary
+            </h2>
             <div className="content__description">
               <div>
                 This project is a <b>UI Components Library for React.</b> 📚
@@ -80,8 +85,10 @@ const project = () => {
           </div>
 
           <div>
-            <h2 className="content__subtitle">Technology</h2>
-            <div className="content__description">
+            <h2 id="technology" className="content__subtitle">
+              Tech Stack
+            </h2>
+
               <ul className="technology">
                 <li className="technology__list">
                   Framework:
@@ -118,11 +125,12 @@ const project = () => {
                   </ul>
                 </li>
               </ul>
-            </div>
           </div>
 
           <div>
-            <h2 className="content__subtitle">SnapShot</h2>
+            <h2 id="snapshot" className="content__subtitle">
+              SnapShot
+            </h2>
             <div className="content__description">
               <img
                 className="content__snapshot"
@@ -138,7 +146,9 @@ const project = () => {
           </div>
 
           <div>
-            <h2 className="content__subtitle">Links</h2>
+            <h2 id="links" className="content__subtitle">
+              Links
+            </h2>
             <div className="content__description">
               <div>
                 UI Library: <a href="#">N/A</a>{" "}
@@ -158,20 +168,22 @@ const project = () => {
 
         <div className="sidebar">
           <div className="sidebar--fixed">
-            {links.map((item, index) => (
+            {anchor.map((item, index) => (
               <animated.li
                 style={sidebarAnimation}
                 className="sidebar__link-box"
                 key={index}
+                onClick={() => {
+                  scrollTo(item.herf)
+                }}
               >
-                <a className="sidebar__link" href={item.herf}>
-                  {item.name}
-                </a>
+                {item.name}
               </animated.li>
             ))}
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   )
 }

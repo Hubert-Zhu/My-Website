@@ -1,12 +1,21 @@
-// If you don't want to use TypeScript you can delete this file!
 import React from "react"
 import { PageProps, graphql } from "gatsby"
 import { animated, useSpring } from "react-spring"
 
+//Components
 import Navbar from "../../../components/Navbar/index"
+import Footer from "../../../components/Footer/index"
+
+//Image
 import demoImage from "../../../images/projects/go-chat/project3.jpg"
 
-const links = [
+//function
+import scrollTo from "../../../util/scrollTo"
+
+//style
+import "../commonStyle/style.scss"
+
+const anchor = [
   {
     name: "Summary",
     herf: "#summary",
@@ -39,12 +48,13 @@ const project = () => {
       <div className="project-grid">
         <div className="content">
           <h1 className="content__title">Mini Chat Library</h1>
+
           <div className="content__demo-image">
             <img src={demoImage} alt="Demo Page" />
           </div>
 
           <div>
-            <h2 className="content__subtitle">Summary</h2>
+            <h2 id="summary" className="content__subtitle">Summary</h2>
             <div className="content__description">
               <div>
                 <b>Online Chatting room.</b> 📚
@@ -54,8 +64,7 @@ const project = () => {
           </div>
 
           <div>
-            <h2 className="content__subtitle">Technology</h2>
-
+            <h2 id="techonolgy" className="content__subtitle">Tech Stack</h2>
             <ul className="technology">
               <li className="technology__list">
                 Framework:
@@ -96,7 +105,7 @@ const project = () => {
           </div>
 
           <div>
-            <h2 className="content__subtitle">SnapShot</h2>
+            <h2 id="snapshot" className="content__subtitle">SnapShot</h2>
             <div className="content__description">
               {/* <img
                 className="content__snapshot"
@@ -107,7 +116,7 @@ const project = () => {
           </div>
 
           <div>
-            <h2 className="content__subtitle">Links</h2>
+            <h2 id="links" className="content__subtitle">Links</h2>
             <div className="content__description">
               {/* <div>
                 Demo Pages: <a href="#">N/A</a>
@@ -124,20 +133,22 @@ const project = () => {
 
         <div className="sidebar">
           <div className="sidebar--fixed">
-            {links.map((item, index) => (
+            {anchor.map((item, index) => (
               <animated.li
                 style={sidebarAnimation}
                 className="sidebar__link-box"
                 key={index}
+                onClick={() => {
+                  scrollTo(item.herf)
+                }}
               >
-                <a className="sidebar__link" href={item.herf}>
-                  {item.name}
-                </a>
+                {item.name}
               </animated.li>
             ))}
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   )
 }
