@@ -5,7 +5,6 @@
 #### Hey!👋 This project has not been finished yet. I want to leave my design plan here and the reasons why I use gatsby. 
 1. In this project, I use **GatsbyJS** as framework to develop a static website for blog. Also, I will use **Netlify-CMS** to do content management.
 2. Gatsby is a React-based framework for static website, so I think it is quite suitable for Blog
-3. It is good chance for me to learn and implement **GraphQL API**, which might replace RESTful in the future under some environment. 
 
 ## 🧐 What's inside?
 
