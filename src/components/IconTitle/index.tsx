@@ -2,7 +2,12 @@ import React from "react"
 
 import "./style.scss"
 
-const IconTitle = React.memo((props) => {
+interface Props {
+  title: string
+  Icon: string
+}
+
+const IconTitle = React.memo((props: Props) => {
   return (
     <div className={"IconTitle"}>
       <h1 className={"IconTitle__title"}>{props.title}</h1>

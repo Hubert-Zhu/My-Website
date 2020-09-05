@@ -1,9 +1,25 @@
 import React from "react"
+
+//Components
 import { Link } from "gatsby"
 
+//Style
 import "./style.scss"
+import { string, any } from "prop-types"
 
-const PostItem = React.memo(({ post }) => {
+interface PostItemProps {
+    post: {
+      frontmatter:{
+        title: string
+        date: any
+        description: string
+        tags: string[]
+        slug: string
+      }
+    }
+}
+
+const PostItem = React.memo(({ post }: PostItemProps) => {
   const { title, date, description, tags, slug } = post.frontmatter
 
   return (
@@ -13,7 +29,7 @@ const PostItem = React.memo(({ post }) => {
         <div className="post-item__date">{date}</div>
         <div className="post-item__description">{description}</div>
         <div className="post-item__tags">
-          {tags.map((tag, index)=>(
+          {tags.map((tag:string, index:number)=>(
             <div className={"post-item__tag"} key={index}>#{tag}</div>
           ))}
         </div>
@@ -22,11 +38,13 @@ const PostItem = React.memo(({ post }) => {
   )
 })
 
-const PostList = React.memo(({ posts }) => {
+
+
+const PostList = React.memo(({ posts } : { posts: Array<any> }) => {
   return (
     <div className="post-list">
-      {posts.map(({ node: post }) => (
-        <PostItem key={post.id} post={post} />
+      {posts.map(({ node }) => (
+        <PostItem key={node.id} post={node} />
       ))}
     </div>
   )

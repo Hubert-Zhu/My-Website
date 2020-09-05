@@ -6,7 +6,12 @@ import Avatar from "../../images/shared/avatar.jpg"
 
 import "./../commonStyle/style.scss"
 
-const links = [
+interface Links {
+  title: string
+  link: string
+}
+
+const links: Array<Links> = [
   {
     title: "About Me",
     link: "/about-me",

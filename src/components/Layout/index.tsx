@@ -1,12 +1,14 @@
-import React from "react"
+import React , { FunctionComponent }from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import { Helmet } from "react-helmet";
 
-//components
-import Navbar from "../Navbar/index"
-import Footer from "../Footer/index"
+interface Props{
+  title: string;
+  description: string;
+  children: FunctionComponent
+}
 
-const Layout = ({ title, description, children }) => {
+const Layout:FunctionComponent<Props> = ({ title, description, children }) => {
   
   const data = useStaticQuery(graphql`
     query HeadingQuery {
