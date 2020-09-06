@@ -1,17 +1,27 @@
 import React from "react"
 import { graphql, withPrefix, useStaticQuery } from "gatsby"
 
+//Components
 import Navbar from "../../components/Navbar"
 import IconTitle from "../../components/IconTitle"
 import PostList from "../../components/PostList"
 import Footer from "../../components/Footer"
 
-
+//Image
 import blogIcon from "../../images/blogs/blog-icon.svg"
 import "./style.scss"
 
 
-const Blogs = ({ data: { posts }}) => {
+interface Props{
+  data:{
+    posts: {
+      edges: any
+    }
+  }
+}
+
+
+const Blogs = ({ data: { posts }} : Props) => {
 
   return (
     <div>

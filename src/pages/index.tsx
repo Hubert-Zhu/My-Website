@@ -8,15 +8,7 @@ import Navbar from "../components/Navbar"
 import Avatar from "../images/shared/avatar.jpg"
 import "./style.scss"
 
-
-
-type DataProps = {
-  site: {
-    buildTime: string
-  }
-}
-
-const UsingTypescript: React.FC<PageProps<DataProps>> = ({ data, path }) => {
+const UsingTypescript: React.FC<PageProps> = ({ data, path }) => {
   const animation = useSpring({
     transform: "translate3d(0px, 0px, 0px)",
     opacity: 1,
@@ -46,10 +38,3 @@ const UsingTypescript: React.FC<PageProps<DataProps>> = ({ data, path }) => {
 
 export default UsingTypescript
 
-export const query = graphql`
-  {
-    site {
-      buildTime(formatString: "YYYY-MM-DD hh:mm a z")
-    }
-  }
-`

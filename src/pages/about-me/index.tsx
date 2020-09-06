@@ -1,10 +1,12 @@
-// If you don't want to use TypeScript you can delete this file!
 import React from "react"
 import { PageProps, graphql } from "gatsby"
 
+
+//Components
 import Navbar from "../../components/Navbar"
 import Footer from "../../components/Footer"
 
+//Image
 import Avatar from "../../images/shared/avatar.jpg"
 import github from "../../images/aboutme/github.png"
 import linkedin from "../../images/aboutme/linkedin.png"
@@ -18,7 +20,7 @@ type DataProps = {
   }
 }
 
-const UsingTypescript: React.FC<PageProps<DataProps>> = ({ data, path }) => (
+const AboutMe: React.FC<PageProps<DataProps>> = ({ data, path }) => (
   <div>
     <Navbar />
 
@@ -129,7 +131,7 @@ const UsingTypescript: React.FC<PageProps<DataProps>> = ({ data, path }) => (
   </div>
 )
 
-export default UsingTypescript
+export default AboutMe
 
 export const query = graphql`
   {

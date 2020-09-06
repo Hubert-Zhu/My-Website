@@ -1,12 +1,19 @@
-import React from "react"
+import React, { FunctionComponent } from "react"
 
-const HTMLContent = ({ content, className } : { content:string, className:string}) => (
-  <div className={className} dangerouslySetInnerHTML={{ __html: content }} />
-)
+interface Props {
+  content: string
+  className: string
+}
 
-const Content = ({ content, className } : { content:string, className:string}) => (
-  <div className={className}>{content}</div>
-)
+function HTMLContent({ content, className }: Props) {
+  return (
+    <div className={className} dangerouslySetInnerHTML={{ __html: content }} />
+  )
+}
+
+function Content({ content, className }: Props) {
+  return <div className={className}>{content}</div>
+}
 
 export default Content
 export { HTMLContent }

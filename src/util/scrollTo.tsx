@@ -1,5 +1,5 @@
-const scrollTo = (selector, blockPosition = "start") => {
-  const element = document.querySelector(selector)
+const scrollTo = (selector: string, blockPosition:string = "start") => {
+  const element:HTMLElement | null = document.querySelector(selector)
 
   if (element) {
     //offset caused by navbar height

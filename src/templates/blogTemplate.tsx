@@ -1,4 +1,4 @@
-import React from "react"
+import React, { FunctionComponent } from "react"
 import { graphql, Link } from "gatsby"
 
 //Components
@@ -11,19 +11,28 @@ import Footer from "../components/Footer"
 import "./style.scss"
 import "./codestyle.scss"
 
+//A Problem here
+interface TemplateProps {
+  content: string
+  description: string
+  tableOfContents: string
+  contentComponent: any
+  tags: Array<string>
+}
+
 export const BlogPostTemplate = ({
   content,
   description,
   tableOfContents,
   contentComponent,
   tags,
-}) => {
+}: TemplateProps) => {
   const PostContent = contentComponent || Content
 
   return (
     <div style={{ position: "static" }}>
       {/* fix gatsby-remark-autolink-headers scrolling, let offsetParent be body */}
-      <div className="留给相应布局">
+      <div className="responsive---?">
         <div className="postify">
           {!!description && (
             <p className="postify__description">{description}</p>
@@ -55,8 +64,32 @@ export const BlogPostTemplate = ({
   )
 }
 
+interface BlogPostProps {
+  data: {
+    site: {
+      siteMetadata: {
+        title: string
+      }
+    }
+    post: {
+      id: string
+      html: string
+      excerpt: string
+      tableOfContents: string
+      frontmatter: {
+        date: string
+        title: string
+        description: string
+        tags: Array<string>
+        slug: string
+      }
+    }
+  }
+  pageContext: string
+}
+
 //export default
-const BlogPost = ({ data: { site, post }, pageContext }) => {
+const BlogPost = ({ data: { site, post }, pageContext }: BlogPostProps) => {
   const { title, description, date, tags } = post.frontmatter
 
   return (
@@ -64,7 +97,6 @@ const BlogPost = ({ data: { site, post }, pageContext }) => {
       title={`${title} | ${site.siteMetadata.title}`}
       description={`${description || post.excerpt}`}
     >
-       
       <div className="blog">
         <Navbar />
         <header className="blog__title-container">

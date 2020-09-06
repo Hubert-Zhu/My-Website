@@ -12,7 +12,17 @@ import project3 from "../../images/projects/go-chat/project3.jpg"
 
 import "./style.scss"
 
-const projects = [
+interface Project{
+  link: string
+  title: string
+  type: string
+  description: string
+  tags: Array<string>
+  to: string
+}
+
+
+const projects: Array<Project> = [
   {
     link: project1,
     title: "Mini UI Library",
