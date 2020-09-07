@@ -6,10 +6,22 @@ $postify-color-link-hover: #333 !default;
 $postify-color-link: #3273dc !default;
 $postify-color-header-counter: #888 !default;
 
+
+@media screen and (max-width: 959px){
+  .blog{
+    max-width: 90vw;
+  }
+}
+
+@media screen and (min-width: 960px){
+  .blog{
+    max-width: 60vw;
+  }
+}
+
 .blog {
   margin: 0px auto;
   padding-top: 120px;
-  max-width: 60vw;
   font-size: 16px;
 
   .nav {
@@ -42,6 +54,17 @@ $postify-color-header-counter: #888 !default;
     font-size: 16px;
   }
 }
+
+
+
+
+
+
+
+
+
+
+
 
 .postify {
   max-width: 100%;

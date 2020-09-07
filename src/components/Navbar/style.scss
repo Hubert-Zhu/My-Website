@@ -1,0 +1,131 @@
+@media screen and (min-width: 960px) {
+  .nav {
+    position: fixed;
+    top: 0;
+
+    width: 100vw;
+    box-sizing: border-box;
+    height: 60px;
+    background-color: white;
+    font-size: 20px;
+    padding: 0 20px;
+    box-shadow: 0px 4px 28px rgba(0, 0, 0, 0.1);
+
+    display: grid;
+    grid-template-columns: 200px 1fr;
+
+    &__toggle {
+      display: none;
+    }
+
+    &__sidebar{
+      display:none;
+    }
+
+    &__avatar {
+      display: flex;
+      align-items: center;
+      img {
+        display: block;
+        max-height: 32px;
+        max-width: 32px;
+        border-radius: 50%;
+      }
+    }
+
+    &__name {
+      & > a {
+        text-decoration: none;
+        color: black;
+      }
+      margin: 0 10px;
+    }
+
+    &__options {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+    }
+
+    &__option {
+      margin: 0 25px;
+      min-height: 100%;
+      line-height: 57px;
+      box-sizing: border-box;
+      &:hover {
+        transition: 0.5s;
+        color: #007be2;
+        box-sizing: border-box;
+      }
+      & > a {
+        text-decoration: none;
+        color: black;
+        &:hover {
+          transition: 0.5s;
+          color: #007be2;
+          box-sizing: border-box;
+        }
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width: 959px) {
+  .nav {
+    position: fixed;
+    top: 0;
+
+    width: 100vw;
+    box-sizing: border-box;
+    height: 60px;
+    background-color: white;
+    font-size: 20px;
+    padding: 0 20px;
+    box-shadow: 0px 4px 28px rgba(0, 0, 0, 0.1);
+
+    display: flex;
+
+    &__toggle {
+      display: flex;
+      align-items: center;
+      margin-right: 20px;
+      cursor: pointer;
+      & > img {
+        height: 30px;
+      }
+    }
+
+    &__avatar {
+      display: flex;
+      align-items: center;
+      img {
+        display: block;
+        max-height: 32px;
+        max-width: 32px;
+        border-radius: 50%;
+      }
+    }
+
+    &__name {
+      & > a {
+        text-decoration: none;
+        color: black;
+      }
+      margin: 0 10px;
+    }
+
+    &__sidebar{
+      display: none;
+
+      &--show{
+        display: block;
+        position: absolute;
+      }
+    }
+
+    &__options {
+      display: none;
+    }
+  }
+}

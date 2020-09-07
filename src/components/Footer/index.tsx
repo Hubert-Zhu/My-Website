@@ -2,7 +2,7 @@ import React from 'react'
 
 import Gatsby from "../../images/Footer/gatsby.svg"
 
-import "./../commonStyle/style.scss"
+import "./style.scss"
 
 const Footer = React.memo(() => {
   return (
