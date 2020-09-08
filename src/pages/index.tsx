@@ -11,15 +11,7 @@ import Avatar from "../images/shared/avatar.jpg"
 import "./style.scss"
 
 const UsingTypescript: React.FC<PageProps> = ({ data, path }) => {
-  const animation = useSpring({
-    transform: "translate3d(0px, 0px, 0px)",
-    opacity: 1,
-    from: { transform: "translate3d(0px, 60px, 0px)" },
-    config: { 
-      tension: 100,
-    },
-    delay: 300,
-  })
+ 
   
   return (
     <Layout>
@@ -27,12 +19,11 @@ const UsingTypescript: React.FC<PageProps> = ({ data, path }) => {
       <div className="home">
         <Navbar />
         <div className="home__wrap">
-
-          <animated.div style={animation} className="home__avatar">
+          <div  className="home__avatar">
             <img src={Avatar} alt="Hello" />
-          </animated.div>
+          </div>
 
-          <animated.h1 style={animation} className="home__name">Hubert Zhu</animated.h1>
+          <h1  className="home__name">Hubert Zhu</h1>
         </div>
       </div>
     </Layout>

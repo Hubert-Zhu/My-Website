@@ -12,7 +12,7 @@ import "./style.scss"
 
 const Projects = React.memo(() => {
   return (
-    <div>
+    <div className="work-experience">
       <Navbar />
       <IconTitle title="Work Experience" Icon={WorkIcon} />
 

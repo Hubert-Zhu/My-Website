@@ -28,13 +28,27 @@
     margin: 44px auto;
   }
 
-  display: grid;
-  gap: 20px;
-  grid-template-columns: 300px 240px 1fr;
-  grid-template-rows: auto;
-  grid-template-areas:
-    "icon name title"
-    "icon time description";
+  @media (min-width: 960px) {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 300px 240px 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "icon name title"
+      "icon time description";
+  }
+ 
+  @media (max-width: 959px) {
+    display: grid;
+    gap: 20px;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "icon"
+      "name"
+      "title"
+      "time"
+      "description";
+  }
 
   &__company-icon {
     grid-area: icon;
@@ -72,4 +86,8 @@
   &__detail{
       color: #007be2;
   }
+}
+
+.work-experience{
+  min-height: 100vh;
 }

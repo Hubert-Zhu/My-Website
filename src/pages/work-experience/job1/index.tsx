@@ -167,12 +167,12 @@ const Job = () => {
           </div>
         </div>
 
-        <div className="sidebar">
-          <div className="sidebar--fixed">
+        <div className="job-sidebar">
+          <div className="job-sidebar--fixed">
             {links.map((item, index) => (
               <animated.li
                 style={sidebarAnimation}
-                className="sidebar__link-box"
+                className="job-sidebar__link-box"
                 key={index}
                 onClick={() => {
                   scrollTo(item.herf)
