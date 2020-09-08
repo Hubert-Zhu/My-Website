@@ -44,9 +44,12 @@ const Nav: React.FC = () => {
   })
 
   const [isShow, setIsShow] = useState(false)
+  const [isHome, setIsHome] = useState(false)
 
   useEffect(()=>{
-    console.log(window.location.pathname)
+    if(window.location.pathname === "/"){
+      setIsHome(true)
+    }
   },[])
 
   return (
@@ -57,7 +60,7 @@ const Nav: React.FC = () => {
           setIsShow(!isShow)
         }}
       >
-        <img src={`${(window.location.pathname === "/")? ListIconWhite:ListIcon}`} alt="List" />
+        <img src={`${isHome? ListIconWhite:ListIcon}`} alt="List" />
       </div>
 
       {/* Sidebar Components */}
