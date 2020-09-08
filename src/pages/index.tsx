@@ -10,11 +10,14 @@ import SEO from "../components/seo"
 import Avatar from "../images/shared/avatar.jpg"
 import "./style.scss"
 
+
+import { Helmet } from "react-helmet"
+
 const UsingTypescript: React.FC<PageProps> = ({ data, path }) => {
  
   
   return (
-    <Layout>
+    <Layout title="Hubert Zhu">
       <SEO />
       <div className="home">
         <Navbar />

@@ -1,7 +1,6 @@
 import React from "react"
 import { PageProps, graphql } from "gatsby"
 
-
 //Components
 import Navbar from "../../components/Navbar"
 import Footer from "../../components/Footer"
@@ -61,15 +60,15 @@ const AboutMe: React.FC<PageProps<DataProps>> = ({ data, path }) => (
       <div className="tool-box__unit">
         <p className="tool-box__unit-topic">Languages:</p>
         <p className="tool-box__items">
-          JavaScript (ES6, NodeJS), TypeScript, HTML5, CSS3, SASS/LESS, C++
+          JavaScript (ES6, NodeJS), TypeScript, HTML5, CSS3, SASS, C++
         </p>
       </div>
 
       <div className="tool-box__unit">
         <p className="tool-box__unit-topic">Framework/Library:</p>
         <p className="tool-box__items">
-          React, Gatsby, Next, Vue, Bootstrap, jQuery, Express, React, Gatsby,
-          Next, Vue, Bootstrap, jQuery, Express, Material-UI, Ant-Design
+          React, Gatsby, Next, Vue, Bootstrap, jQuery, Express, Material-UI,
+          Ant-Design
         </p>
       </div>
 
@@ -83,7 +82,9 @@ const AboutMe: React.FC<PageProps<DataProps>> = ({ data, path }) => (
 
       <div className="tool-box__unit">
         <p className="tool-box__unit-topic">Database: </p>
-        <p className="tool-box__items">MongoDB, MySQL(MySQL Workbench)</p>
+        <p className="tool-box__items">
+          MongoDB, MySQL(MySQL Workbench), Mongoose
+        </p>
       </div>
 
       <div className="tool-box__unit">
@@ -94,9 +95,9 @@ const AboutMe: React.FC<PageProps<DataProps>> = ({ data, path }) => (
       <div className="tool-box__unit">
         <p className="tool-box__unit-topic">Other Tools:</p>
         <p className="tool-box__items">
-          Git/GitHub, Styled-Components, Redux, Vuex, Gulp, Grunt, Storybook,
-          Webpack, Rollup, Parcel, Postman, Jest, Enzyme, Netlify, Google
-          Firebase, Apache Echarts, ChartJS, CMS, Ajax/Axios
+          Git/GitHub, Styled-Components, CMS, Ajax/Axios, Redux, Vuex, Gulp,
+          Grunt, Webpack, Rollup, Parcel, Postman, Jest, Enzyme, Netlify, Google
+          Firebase, Apache Echarts, ChartJS ...
         </p>
       </div>
     </div>

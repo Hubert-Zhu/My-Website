@@ -141,7 +141,7 @@
     &__sidebar {
       position: absolute;
       left: -60vw;
-      transition: 500ms;
+      transition: 300ms;
       width: 60vw;
       height: 100vh;
     
@@ -153,7 +153,7 @@
         width: 60vw;
         height: 100vh;
         background: #FFFFFF;
-        transition: 1s;
+        transition: 500ms;
         transform: translateX(0px)
       }
     }
