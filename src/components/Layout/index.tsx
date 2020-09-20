@@ -1,15 +1,13 @@
-import React , { FunctionComponent }from "react"
+import React, { FunctionComponent } from "react"
 import { graphql, useStaticQuery } from "gatsby"
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet"
 
-interface Props{
-  title: string;
-  description: string;
-  children: FunctionComponent
+interface Props {
+  title?: string
+  description?: string
 }
 
-const Layout:FunctionComponent<Props> = ({ title, description, children }) => {
-  
+const Layout: FunctionComponent<Props> = ({ title, description, children }) => {
   const data = useStaticQuery(graphql`
     query HeadingQuery {
       site {
@@ -38,8 +36,8 @@ const Layout:FunctionComponent<Props> = ({ title, description, children }) => {
         <link rel="manifest" href="/manifest.json" />
         <meta name="theme-color" content="#fff" />
       </Helmet>
-      <div>{children}</div>
 
+      <div>{children}</div>
     </div>
   )
 }
