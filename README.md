@@ -1,10 +1,7 @@
 # Hubert Zhu Blog
   
-## 👷 Building ......
-
-#### Hey!👋 This project has not been finished yet. I want to leave my design plan here and the reasons why I use gatsby. 
-1. In this project, I use **GatsbyJS** as framework to develop a static website for blog. Also, I will use **Netlify-CMS** to do content management.
-2. Gatsby is a React-based framework for static website, so I think it is quite suitable for Blog
+## Hey!👋 Here is the source code for my website. 
+1. This project is bulit on **GatsbyJS** 
 
 ## 🧐 What's inside?
 
@@ -51,4 +48,4 @@ A quick look at the top-level files and directories you'll see in a Gatsby proje
 
 ## 💫 Deploy
 
-I plan to use Netlify or Gatsby Cloud
+Netlify (with Netlify CMS)
