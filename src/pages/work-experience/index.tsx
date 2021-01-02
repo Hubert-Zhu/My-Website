@@ -42,13 +42,13 @@ const Projects = React.memo(() => {
           <div className="joblist__company-icon">
             <img style={{ width: 80 }} src={Searching} alt="WellnessWorld" />
           </div>
-          <div className="joblist__company-name">? ? ?</div>
+          <div className="joblist__company-name">IBM</div>
           <div className="joblist__joblist-title">
-            Full-time - Frontend/Fullstack Developer
+            Full-time - Frontend Developer
           </div>
           <div className="joblist__joblist-time">2021.01 - 2020.04</div>
           <div className="joblist__joblist-description">
-            I am looking for the next joblist.
+            Incoming Intern
           </div>
         </div>
       
